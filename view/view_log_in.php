@@ -3,20 +3,34 @@
 
 <?php 
 
-    include_once '../model/model_sql_connector.php'
+    include '../model/model_sql_connector.php';
 
     //Validate the connection printing the users in the screen
-    $oracleConnection = openOracleConnection(); 
+    $conn = openOracleConnection(); 
 
-    if (!$oracleConnection) {
+    if (!$conn){
 
-        $m = oci_error(); 
+        $m = oci_error();
         echo $m['message'];
-        exit; 
+        exit;
+
     } else {
-        print "Connected to Oracle successfully"; 
+
+        echo "Connected to Oracle Successfully <br><br>";
+
+        $sqlQuery = oci_parse($conn,'SELECT * FROM USUARIO');
+        oci_execute($sqlQuery);
+
+        while ($row = oci_fetch_array($sqlQuery,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+            echo '<br>';
+            echo $row['NOMBRE'] . ' - Correo: ' . $row['CORREO'];
+            echo '<br>';
+
+        }
+
     }
 
-    oci_close($oracleConnection);
+    closeOracleConnection($conn);
 
 ?>

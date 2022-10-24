@@ -10,7 +10,7 @@
 
     //Close the connection
     function closeOracleConnection($connection){
-        oci_close($conn);
+        oci_close($connection);
     }
 
 ?>
