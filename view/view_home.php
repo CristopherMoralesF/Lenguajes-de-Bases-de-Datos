@@ -1,5 +1,6 @@
 <?php
     include_once 'components/navigation.php';
+    include_once '../controller/controller_activo.php'
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +20,12 @@
 
 </head>
 
+<style>
+    .separator {
+        padding: 15px;
+    }
+</style>
+
 <body class="sb-nav-fixed">
 
     <?php printNavigationPanel() ?>
@@ -26,40 +33,85 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">My Dashboard</h1>
-                <h4 class="text-muted">Open Assets</h4>
 
-                <div class="container-fluid" style = "margin-top: 25px;">
-                    <div class="col col-lg-6">
-                        <table class="table">
-                            <thead>
-                                <th scope="col">Asset Type</th>
-                                <th scope="col">Count of Assets</th>
-                                <th scope="col">Total Balance</th>
-                                <th></th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Vehicules</td>
-                                    <td>5</td>
-                                    <td>250000.00</td>
-                                    <td><button type="button" class="btn btn-info text-light">Details</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <h1 class="mt-4">My Dashboard</h1>
+                <h4 class="text-muted">Assets Information</h4>
+
+                <div class="container separator">
+                    <div class="row">
+
+                        <div class="col-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Count Assets</div>
+                                <div class="card-body">
+                                    <p class="card-text">The company has a total of {count of assets} assest currently</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Total Assets (USD)</div>
+                                <div class="card-body">
+                                    <p class="card-text">The company has a investment of {Sum of amount} USD</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Compliance Percentaje</div>
+                                <div class="card-body">
+                                    <p class="card-text">The compliance percentaje is {compliance percentaje} current risk is {risk Level}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Primary card title</h5>
+                                    <p class="card-text">You need to main {assets under user} assets</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        
                     </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <!-- Draw results charts -->
+                            <div class="row" style = "width: 100%; height: 500px">
+                                <canvas id = "chartClassAssetResume"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <!-- Draw results charts -->
+                            <div class="row" style = "width: 100%; height: 500px">
+                                <canvas id = "chartComplianceResume"></canvas>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                
 
             </div>
     </div>
 
+    <!-- External vendor JS codes -->
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../custom components/js/side-bar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
+    <script src = "../vendor/chartJS/charts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    
+    <!-- Custom JS codes -->
+    <script src="../custom components/js/side-bar.js"></script>
+    <script src = "../custom components/js/home_charts.js"></script>
 
 </body>
 

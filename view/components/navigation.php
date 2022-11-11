@@ -48,7 +48,7 @@ function printNavigationPanel() {
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Start</div>
-                    <a class="nav-link" href="home.php">
+                    <a class="nav-link" href="view_home.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         My Dashboard
                     </a>
