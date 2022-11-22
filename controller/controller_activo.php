@@ -23,5 +23,20 @@
         echo (json_encode($outputList));
     }
     
+    #Create a JSON reply with the resume of the indicators
+    if(isset($_GET['AssetIndResume'])){
+
+        #load list of indicators
+        $indicators = modelAssetIndResume();
+        
+        $indicator = oci_fetch_assoc($indicators);
+
+        $outputList['Valor Activos'] = $indicator['TOTAL_ACTIVOS'];
+        $outputList['Total Inversion'] = $indicator['TOTAL_INVERSION'];
+
+        echo (json_encode($outputList));
+        
+
+    }
 
 ?>
