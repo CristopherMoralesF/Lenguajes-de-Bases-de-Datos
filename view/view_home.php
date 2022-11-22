@@ -44,7 +44,8 @@
                             <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Count Assets</div>
                                 <div class="card-body">
-                                    <p class="card-text" id = 'txtTotalAssets' name = 'txtTotalAssets'>The company has a total of {count of assets} assest currently
+                                    <p class="card-text" id='txtTotalAssets' name='txtTotalAssets'>The company has a
+                                        total of {count of assets} assest currently
                                     </p>
                                 </div>
                             </div>
@@ -54,7 +55,8 @@
                             <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Total Assets (USD)</div>
                                 <div class="card-body">
-                                    <p class="card-text" id = 'txtTotalInvestment' name = 'txtTotalInvestment'>The company has a investment of {Sum of amount} USD</p>
+                                    <p class="card-text" id='txtTotalInvestment' name='txtTotalInvestment'>The company
+                                        has a investment of {Sum of amount} USD</p>
                                 </div>
                             </div>
                         </div>
@@ -63,15 +65,17 @@
                             <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
                                 <div class="card-header">Compliance Percentaje</div>
                                 <div class="card-body">
-                                    <p class="card-text">Compliance percentaje is {compliance percentaje} - {risk Level}</p>
+                                    <p class="card-text" id='txtCompliancePercentaje' name='txtCompliancePercentaje'>
+                                        Compliance percentaje is {compliance percentaje}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Assets Own by You</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">You need to main {assets under user} assets</p>
+                                    <p class="card-text" id="txtAssetsByUser" name="txtAssetsByUser">You need to main
+                                        {assets under user} assets</p>
                                 </div>
                             </div>
                         </div>

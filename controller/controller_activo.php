@@ -28,11 +28,25 @@
 
         #load list of indicators
         $indicators = modelAssetIndResume();
-        
         $indicator = oci_fetch_assoc($indicators);
+
+        #Define the level of risk according to compliance percentage
+        
+        $CompliancePercentaje = $indicator['COMPLIANCE_PERCENTAJE'];
+
+        if ($CompliancePercentaje > 0 && $CompliancePercentaje <= 50) {
+            $riskIndicator = 'High';
+        } elseif ($CompliancePercentaje > 50 && $CompliancePercentaje <= 75) {
+            $riskIndicator = "Mid";
+        } else {
+            $riskIndicator = "Low";
+        };
 
         $outputList['Valor Activos'] = $indicator['TOTAL_ACTIVOS'];
         $outputList['Total Inversion'] = $indicator['TOTAL_INVERSION'];
+        $outputList['Porcentaje Cumplimiento'] = $indicator['COMPLIANCE_PERCENTAJE'];
+        $outputList['Activos Usuario'] = $indicator['TOTAL_ASSETS_OWN_BY_USER'];
+        $outputList['Risk Indicator'] = $riskIndicator;
 
         echo (json_encode($outputList));
         

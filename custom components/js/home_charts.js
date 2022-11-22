@@ -11,8 +11,12 @@ function modelAssetIndResume() {
     }, success: function (data) {
 
       let indicatorsList = $.parseJSON(data);
+      
       document.getElementById('txtTotalAssets').innerHTML = "The company has a total of " +  indicatorsList['Valor Activos'] + " assest currently";
       document.getElementById('txtTotalInvestment').innerHTML = "The company has a investment of "+ new Intl.NumberFormat().format(indicatorsList['Total Inversion']) + " USD";
+      document.getElementById('txtCompliancePercentaje').innerHTML = "Compliance percentaje is " + indicatorsList['Porcentaje Cumplimiento'] + '% current risk level is ' + indicatorsList['Risk Indicator'];
+      document.getElementById('txtAssetsByUser').innerHTML = "You own a total of " + indicatorsList['Activos Usuario'] + " assets, please ensure the correct maintenance";
+
 
     }, error: function (data) {
       alert("Error calling the data, review your connection")

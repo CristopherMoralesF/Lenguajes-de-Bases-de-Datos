@@ -26,6 +26,38 @@ BEGIN
           
 END;
 
+--------------------- Función para crear un resumen de los principales indicadores de los activos correspondientes v2 --------------------- 
+CREATE OR REPLACE PROCEDURE FUNC_ESTATUS_ACTIVOS (
+    IN_USER_ID      IN USUARIO.ID_USUARIO%TYPE,
+    OUT_KPI_RESUME  OUT SYS_REFCURSOR
+)
+AS  
+    C_RESUMEN_ACTIVOS SYS_REFCURSOR;
+        
+BEGIN
+
+    OPEN C_RESUMEN_ACTIVOS FOR 
+        SELECT
+            COUNT(A.ID_ACTIVO) AS TOTAL_ACTIVOS, 
+            SUM(A.VALOR_ADQUISICION) AS TOTAL_INVERSION,
+            ROUND(AVG(CASE
+                WHEN (SELECT COUNT(TV.DESCRIPCION_VALIDACION) FROM TIPO_VALIDACION TV WHERE TV.ID_CLASE = A.ID_CLASE) = 0 OR (SELECT COUNT(V.ID_ACTIVO) FROM VALIDACION V WHERE V.ID_ACTIVO = A.ID_ACTIVO) = 0 THEN
+                    0
+                ELSE
+                    ((SELECT COUNT(V.ID_ACTIVO) FROM VALIDACION V WHERE V.ID_ACTIVO = A.ID_ACTIVO) / (SELECT COUNT(TV.DESCRIPCION_VALIDACION) FROM TIPO_VALIDACION TV WHERE TV.ID_CLASE = A.ID_CLASE)) * 100
+            END),2) AS COMPLIANCE_PERCENTAJE,
+            SUM(CASE
+                WHEN A.ID_OWNER = IN_USER_ID THEN 
+                    1
+                ELSE 
+                    0
+            END) AS TOTAL_ASSETS_OWN_BY_USER        
+        FROM ACTIVO A; 
+        
+    OUT_KPI_RESUME := C_RESUMEN_ACTIVOS;
+          
+END;
+
 ------- Comprobación
 DECLARE
     OUT_KPI_RESUME SYS_REFCURSOR;
