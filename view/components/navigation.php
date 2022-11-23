@@ -106,14 +106,18 @@ function printNavigationPanel() {
                             </div>
                         </nav>
                     </div>
-                    <div class="sb-sidenav-menu-heading">DEPRECIATION</div>
-                    <a class="nav-link" href="charts.html">
+                    <div class="sb-sidenav-menu-heading">ACCOUNTING</div>
+                    <a class="nav-link" href="view_accounting_depreciation.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Charts
+                        Depreciation
                     </a>
-                    <a class="nav-link" href="tables.html">
+                    <a class="nav-link" href="view_accounting_journalsReport.php">
                         <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                        Tables
+                        Journals Report
+                    </a>
+                    <a class="nav-link" href="view_accounting_reconciliation.php">
+                        <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
+                        Reconciliation
                     </a>
                 </div>
             </div>
