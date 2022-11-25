@@ -11,7 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home</title>
+    <title>Journal Detail</title>
+    <link rel="icon" href="../custom components/img/web_icon.png">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../custom components/css/side-bar.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
@@ -42,20 +43,7 @@
 
                         <div class="col-2">
                             <h4 class='text-muted'>Assets</h4>
-                            <p class="text-muted">{Total Assets}</p>
-                        </div>
-
-                        <div class="col-1">
-                            <div class="text-center">
-                                <h1>
-                                    +
-                                </h1>
-                            </div>
-                        </div>
-
-                        <div class="col-2">
-                            <h4 class='text-muted'>Liabilities</h4>
-                            <p class="text-muted">{Liabilities}</p>
+                            <p class="text-muted" id="txtTotalAssets" name="txtTotalAssets">{Total Assets}</p>
                         </div>
 
                         <div class="col-1">
@@ -66,9 +54,22 @@
                             </div>
                         </div>
 
+                        <div class="col-2">
+                            <h4 class='text-muted'>Liabilities</h4>
+                            <p class="text-muted" id="txtLiabilities" name="txtLiabilities">{Liabilities}</p>
+                        </div>
+
+                        <div class="col-1">
+                            <div class="text-center">
+                                <h1>
+                                    +
+                                </h1>
+                            </div>
+                        </div>
+
                         <div class="col-3">
                             <h4 class='text-muted'>Capital</h4>
-                            <p class="text-muted">{Total Capital}</p>
+                            <p class="text-muted" id="TotalCapital" name="TotalCapital">{Total Capital}</p>
                         </div>
 
                     </div>
@@ -76,9 +77,29 @@
 
                 <div class="container">
                     <div class="row">
+
                         <div class="col-12">
 
-                            <table class="table table-striped">
+                            <table>
+                                <td>
+                                    <form action="view_accounting_journalsReport_addJournal.php">
+                                        <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i> Add
+                                            Journal</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <button class="btn btn-outline-primary"
+                                        onclick="exportJournalsExcel('journalsResume','journals-resume')"><i
+                                            class="fa-regular fa-file-excel"></i> Export Excel</button>
+                                </td>
+                            </table>
+
+
+                        </div>
+                        <br><br>
+                        <div class="col-12">
+
+                            <table class="table table-striped" id='journalsResume' name='journalsResume'>
                                 <thead class="text-center table-striped thead-dark">
                                     <th>Journal ID</th>
                                     <th>Date</th>
@@ -87,10 +108,10 @@
                                     <th>Total Debits</th>
                                     <th>Details</th>
                                 </thead>
-                                <tbody id="tableJournalResume" name = "tableJournalResume">
+                                <tbody id="tableJournalResume" name="tableJournalResume">
                                 </tbody>
                             </table>
-                          
+
 
                         </div>
                     </div>
