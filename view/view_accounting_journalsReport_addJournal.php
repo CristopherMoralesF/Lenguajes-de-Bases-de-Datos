@@ -98,11 +98,18 @@ input:focus {
                         <div class="row">
                             <div class="col-12">
                                 <h5 class="text-muted"><i class="fa-solid fa-calculator"></i> Journal Body</h5>
+
                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                     data-target=".bd-example-modal-lg"><i class="fa-solid fa-plus"></i> Add
                                     Line</button>
-                                <p id="journalValidation" class='text-danger' style = 'padding: 10px'><i class='fa-solid fa-bomb'></i> Add a new line to the JE body</p>
-                                <table class="table " style="margin-top: 10px;" id = 'tblJournalBody' name = 'tblJournalBody'>
+
+                                <button type="button" class="btn btn-primary" id = "saveJournal" name = "saveJournal" style = 'display: none'><i class="far fa-save"></i> Guardar
+                                    Asiento</button>
+
+                                <p id="journalValidation" class='text-danger' style='padding: 10px'><i
+                                        class='fa-solid fa-bomb'></i> Add a new line to the JE body</p>
+                                <table class="table " style="margin-top: 10px;" id='tblJournalBody'
+                                    name='tblJournalBody'>
                                     <thead class="text-center thead-light">
                                         <th>Line</th>
                                         <th>GL Account</th>
@@ -129,34 +136,32 @@ input:focus {
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <h4 class="text-muted" style='padding:15px'>Add Journal Line</h4>
-                        <form action="" style="margin: 15px">
+                        <div style="margin: 15px">
 
                             <label for='selAccount'>GL Account</label>
                             <select name="selAccount" id="selAccount" class="form-select">
-                                <option selected>Select the account</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <!-- Options loaded by JS function  -->
                             </select>
 
-                            <label for='selAccount' style='margin-top: 25px;'>Nature</label>
+                            <label for='selNature' style='margin-top: 25px;'>Nature</label>
                             <select name="selNature" id="selNature" class="form-select">
                                 <option value="1">Debit</option>
                                 <option value="2">Credit</option>
                             </select>
 
-                            <label for='txtLineDescription' style='margin-top: 25px;'>Line Description</label>
-                            <input type='text' class='form-control' id='txtLineDescription' name='txtLineDescription' required>
+                            <label for='txtFormLineDescription' style='margin-top: 25px;'>Line Description</label>
+                            <input type='text' class='form-control' id='txtFormLineDescription'
+                                name='txtFormLineDescription' required>
 
-                            <label for='txtAmount' style='margin-top: 25px;'>Line Amount</label>
-                            <input type='number' class='form-control' id='txtAmount' name='txtAmount' required>
+                            <label for='txtFormAmount' style='margin-top: 25px;'>Line Amount</label>
+                            <input type='number' class='form-control' id='txtFormAmount' name='txtFormAmount' required>
 
                             <div class="d-flex justify-content-center align-items-center" style="100vh">
-                                <button class='btn btn-primary ' style='margin-top: 25px;'><i
+                                <button class='btn btn-primary ' style='margin-top: 25px;' onclick='submitLine()'><i
                                         class="fa-solid fa-plus"></i> Add Line</button>
                             </div>
 
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
