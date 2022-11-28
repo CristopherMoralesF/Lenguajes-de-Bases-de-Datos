@@ -1,6 +1,7 @@
 <?php
     include_once 'components/navigation.php';
-    include_once '../controller/controller_activo.php'
+    include_once '../controller/controller_activo.php';
+    include_once '../controller/controller_usuario.php';
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +38,11 @@
 
                 <h1 class="mt-4">My Dashboard</h1>
                 <h4 class="text-muted">Assets Information</h4>
-
+                <?php
+                echo "Nombre de usuario " . $_SESSION['nombre'];
+                echo "<br><br>";
+                echo "ROLE:" . $_SESSION['role'];
+    ?>
                 <div class="container separator">
                     <div class="row">
 

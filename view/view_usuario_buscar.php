@@ -26,23 +26,22 @@
         <div id="formContent">
             <!-- Tabs Titles -->
 
-            <!-- Icon -->
-            <div class="fadeIn first">
-                <img src="../custom components/img/Log in.png" id="icon" alt="User Icon" />
-            </div>
+        
 
             <!-- Login Form -->
-            <form method = "POST" action="view_home.php">
-                <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-                <input type="submit" class="fadeIn fourth" name = "btn_login" id = "btn_login" value="Log In">
+            <form method = "POST">
+                <label>Buscar por id un usuario</label>
+                <br>
+
+                <input type="text" id="id" class="fadeIn second" name="id" placeholder="Buscar id">
+                <input type="submit" class="fadeIn fourth" name = "btn_buscar_id" id = "btn_buscar_id" value="Buscar id">
+            
+
+                </div>
             </form>
 
             <!-- Remind Password -->
-            <div id="formFooter">
-                <a class="underlineHover" href="#">Forgot Password?</a>
-            </div>
-
+         
         </div>
     </div>
 
