@@ -1,7 +1,7 @@
 <?php
-    include_once 'components/navigation.php';
-    include_once '../controller/controller_activo.php';
-    include_once '../controller/controller_usuario.php';
+include_once 'components/navigation.php';
+include_once '../controller/controller_activo.php';
+include_once '../controller/controller_usuario.php';
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +23,9 @@
 </head>
 
 <style>
-.separator {
-    padding: 15px;
-}
+    .separator {
+        padding: 15px;
+    }
 </style>
 
 <body class="sb-nav-fixed">
@@ -39,6 +39,33 @@
                 <h1 class="mt-4">Admin</h1>
                 <h4 class="text-muted">Create User</h4>
 
+                <form method="POST" action="view_admin_usersCreateUser.php">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                        <input name="nombre"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input name="email"  type="email" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input name="password"  type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="disabledSelect" class="form-label">Role</label>
+                        <select name="role" id="role" class="form-select">
+                            <option>ADMIN</option>
+                            <option>CONTADOR</option>
+                            <option>TAGGER</option>
+                        </select>
+                    </div>
+                  <br>
+                    <button type="submit" name="guardar_usuario"class="btn btn-primary">Submit</button>
+                </form>
 
             </div>
     </div>

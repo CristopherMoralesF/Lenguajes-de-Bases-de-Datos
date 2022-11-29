@@ -90,4 +90,54 @@ echo "</table>";
        return $alerta;
 
     }
+
+    function crearUsuario($nombre,$correo , $password,$role)
+    {
+        $conn=openOracleConnection();
+ 
+        $sql = 'BEGIN  crear_usuario(:nombre,:correo ,:password ,:role ,:alerta); END;';
+        
+        $stmt = oci_parse($conn,$sql);
+        
+        oci_bind_by_name($stmt,':correo',$correo,32);
+        
+       
+        oci_bind_by_name($stmt,':password',$password,32);
+        
+        oci_bind_by_name($stmt,':nombre',$nombre,32);
+        
+        oci_bind_by_name($stmt,':role',$role,32);
+        
+        oci_bind_by_name($stmt,':alerta',$alerta,32);
+
+        
+         oci_execute($stmt);
+
+
+       return $alerta;
+
+    }
+
+
+
+
+    function MostrarTablaCursor()
+    {
+
+     $conn=openOracleConnection();
+
+    $stid = oci_parse($conn, 'begin :cursor :=mostrar_Tabla_Usuarios(); end;');
+    $p_cursor = oci_new_cursor($conn);
+
+    oci_bind_by_name($stid, ':cursor', $p_cursor, -1, OCI_B_CURSOR);
+    
+
+    
+    oci_execute($stid);
+
+    oci_free_statement($stid);
+
+   return $p_cursor;
+
+    } 
 ?>

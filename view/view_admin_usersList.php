@@ -37,10 +37,16 @@
             <div class="container-fluid px-4">
 
                 <h1 class="mt-4">Admin</h1>
-                <h4 class="text-muted">User List</h4>
+                <h4 class="text-muted" id="users_list" name="users_list">User List</h4>
+            <div action="view_admin_usersList.php" method="get">
 
+            <?php mostrarDatos($cursor) ?>
+            </div>
 
             </div>
+
+
+
     </div>
 
     <!-- External vendor JS codes -->
