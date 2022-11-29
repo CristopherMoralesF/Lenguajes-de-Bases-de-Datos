@@ -2,9 +2,12 @@
 
 function printNavigationPanel() {
 
-    session_start(); 
-    $userName = $_SESSION['userName'];
+    session_start();
+     
+    $userName = $_SESSION['nombre'];
+    $userRole = $_SESSION['role'];
     $companyName = 'Asset Management S.A.';
+    session_write_close();
     
     echo '<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
@@ -52,7 +55,28 @@ function printNavigationPanel() {
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         My Dashboard
                     </a>
-                    <div class="sb-sidenav-menu-heading">ASSET MANAGEMENT</div>
+
+                    ' 
+                    . addTaggerFunctionalities($userRole)
+
+                    . addAccountantFunctionalities($userRole)
+
+                    . addAdminFuntionalities($userRole) . '
+
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="medium">Logged in as: ' . $userName   . '</div>
+                <div class="small">Role: ' . $userRole   . '</div>
+            </div>
+        </nav>
+    </div>';
+
+}
+
+function addTaggerFunctionalities($role){
+    if($role == 'TAGGER'){
+        return '<div class="sb-sidenav-menu-heading">ASSET MANAGEMENT</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                         data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -66,68 +90,88 @@ function printNavigationPanel() {
                             <a class="nav-link" href="../view/assetTypes.php"> Asset Types</a>
                             <a class="nav-link" href="../assetTypes.php">Asset List</a>
                         </nav>
-                    </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-                        aria-expanded="false" aria-controls="collapsePages">
-                        <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                        Purchase Orders
-                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                    </a>
-                    <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-                        data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                                aria-controls="pagesCollapseAuth">
-                                Authentication
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
-                                data-bs-parent="#sidenavAccordionPages">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="login.html">Login</a>
-                                    <a class="nav-link" href="register.html">Register</a>
-                                    <a class="nav-link" href="password.html">Forgot Password</a>
-                                </nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                aria-controls="pagesCollapseError">
-                                Error
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
-                                data-bs-parent="#sidenavAccordionPages">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="401.html">401 Page</a>
-                                    <a class="nav-link" href="404.html">404 Page</a>
-                                    <a class="nav-link" href="500.html">500 Page</a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="sb-sidenav-menu-heading">ACCOUNTING</div>
-                    <a class="nav-link" href="view_accounting_depreciation.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Depreciation
-                    </a>
-                    <a class="nav-link" href="view_accounting_journalsReport.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                        Journals Report
-                    </a>
-                    <a class="nav-link" href="view_accounting_reconciliation.php">
-                        <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
-                        Reconciliation
-                    </a>
-                </div>
-            </div>
-            <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
-                ' . $userName   . '
-            </div>
-        </nav>
-    </div>';
+                    </div>';
+    } else {
+        return '';
+    }
+}
 
+function addAccountantFunctionalities($role){
+
+    if($role == 'CONTADOR'){
+        return '<div class="sb-sidenav-menu-heading">ACCOUNTING</div>
+        <a class="nav-link" href="view_accounting_depreciation.php">
+            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+            Depreciation
+        </a>
+        <a class="nav-link" href="view_accounting_journalsReport.php">
+            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+            Journals Report
+        </a>
+        <a class="nav-link" href="view_accounting_reconciliation.php">
+            <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
+            Reconciliation
+        </a>';
+    } else {
+        return '';
+    }
+}
+
+function addAdminFuntionalities($role){
+
+    if($role == 'ADMIN'){
+        return '
+        <div class="sb-sidenav-menu-heading">ADMIN</div>   
+
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+            data-bs-target="#collapseLayoutsAdminUsers" aria-expanded="false" aria-controls="collapseLayoutsAdminUsers">
+            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+            Users
+            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+
+        <div class="collapse" id="collapseLayoutsAdminUsers" aria-labelledby="headingOne"
+            data-bs-parent="#sidenavAccordion">
+            <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="../view/view_admin_usersList.php">Users List</a>
+                <a class="nav-link" href="../view/view_admin_usersCreateUser.php">Create User</a>
+            </nav>
+        </div>
+
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+            data-bs-target="#collapseLayoutsAccount" aria-expanded="false" aria-controls="collapseLayoutsAccount">
+            <div class="sb-nav-link-icon"><i class="fa-solid fa-receipt"></i></div>
+            Accounts
+            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+
+        <div class="collapse" id="collapseLayoutsAccount" aria-labelledby="headingOne"
+            data-bs-parent="#sidenavAccordion">
+            <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="../view/view_admin_accountList.php">Account List</a>
+                <a class="nav-link" href="../view/view_admin_accountCreateAccount.php">Create Account</a>
+            </nav>
+        </div>
+
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+        data-bs-target="#collapseLayoutsClass" aria-expanded="false" aria-controls="collapseLayoutsClass">
+        <div class="sb-nav-link-icon"><i class="fa-solid fa-car"></i></div>
+        Classes
+        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+
+        <div class="collapse" id="collapseLayoutsClass" aria-labelledby="headingOne"
+            data-bs-parent="#sidenavAccordion">
+            <nav class="sb-sidenav-menu-nested nav">
+                <a class="nav-link" href="../view/view_admin_classList.php">Classes List</a>
+                <a class="nav-link" href="../view/view_admin_classCreateClass.php">Create Class</a>
+            </nav>
+        </div>
+        ';
+
+    } else {
+        return '';
+    }
 }
 
 ?>

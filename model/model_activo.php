@@ -17,6 +17,8 @@
 
         $conn = openOracleConnection();
 
+        
+
         $stmt = "BEGIN
                     FUNC_ESTATUS_ACTIVOS(:IN_USER_ID,:OUT_KPI_RESUME);
                 END;";

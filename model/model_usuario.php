@@ -85,6 +85,8 @@ echo "</table>";
          $_SESSION['nombre'] =$nombre;
          $_SESSION['role'] = $role;
 
+         session_write_close();
+
        return $alerta;
 
     }

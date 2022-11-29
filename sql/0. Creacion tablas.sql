@@ -52,6 +52,8 @@ CREATE TABLE USUARIO (
 INSERT INTO USUARIO (NOMBRE, CORREO, USER_PASSWORD, ID_ROLE) VALUES ('Cristopher Morales','cmorale@asset_management.com','Cris123@',1);
 INSERT INTO USUARIO (NOMBRE, CORREO, USER_PASSWORD, ID_ROLE) VALUES ('Kimberly Morales','kmorale@asset_management.com','kim123@',2);
 INSERT INTO USUARIO (NOMBRE, CORREO, USER_PASSWORD, ID_ROLE) VALUES ('Stephany Morales','smorale@asset_management.com','Fany123@',2);
+INSERT INTO USUARIO (NOMBRE, CORREO, USER_PASSWORD, ID_ROLE) VALUES ('Stephany Morales','smorale@asset_management.com','Fany123@',2);
+INSERT INTO USUARIO (NOMBRE, CORREO, USER_PASSWORD, ID_ROLE) VALUES ('Diego Lee','dlee@asset_management.com','Diego123@',3);
 
 SELECT * FROM USUARIO;
 
