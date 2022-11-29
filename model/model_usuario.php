@@ -62,13 +62,14 @@ echo "</table>";
     {
         $conn=openOracleConnection();
  
-        $sql = 'BEGIN  validar_usuarios(:correo ,:password ,:nombre,:role ,:alerta); END;';
+        $sql = 'BEGIN  validar_usuarios(:correo ,:id,:password ,:nombre,:role ,:alerta); END;';
         
         $stmt = oci_parse($conn,$sql);
         
         oci_bind_by_name($stmt,':correo',$correo,32);
         
-       
+        oci_bind_by_name($stmt,':id',$id,32);
+
         oci_bind_by_name($stmt,':password',$password,32);
         
         oci_bind_by_name($stmt,':nombre',$nombre,32);
@@ -84,6 +85,8 @@ echo "</table>";
          
          $_SESSION['nombre'] =$nombre;
          $_SESSION['role'] = $role;
+         $_SESSION['id_usuario'] = $id;
+         
 
          session_write_close();
 

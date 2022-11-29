@@ -1,5 +1,5 @@
- CREATE OR REPLACE PROCEDURE 
- validar_usuarios ( var_correo in VARCHAR2,var_user_password in VARCHAR2 ,var_nombre out varchar2,var_role out varchar2 ,  Alerta out varchar2) 
+CREATE OR REPLACE PROCEDURE 
+ validar_usuarios ( var_correo in VARCHAR2,var_id_usuario out number,var_user_password in VARCHAR2 ,var_nombre out varchar2,var_role out varchar2 ,  Alerta out varchar2) 
  AS
  validador_usuario number;
  
@@ -9,7 +9,7 @@
  from usuario
  where correo=var_correo and USER_PASSWORD = var_user_password;
 
- Select nombre into var_nombre from usuario
+ Select nombre ,ID_USUARIO into var_nombre ,var_id_usuario from usuario
  where correo=var_correo and USER_PASSWORD = var_user_password;
   
  select b.NOMBRE_ROLE into var_role from  usuario a inner join  usuario_role b on b.id_role=a.id_role 
@@ -39,3 +39,5 @@
  imprimir := 'Nombre ' || var_usuario.nombre ||' Correo '|| var_usuario.correo ;
  
  END;
+
+ 
