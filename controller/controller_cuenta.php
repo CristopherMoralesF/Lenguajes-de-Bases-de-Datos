@@ -43,4 +43,21 @@
         }
 
         echo(json_encode($outputList));
+
     }
+
+    #Function to create a new account as soon as the form is complete
+    if(isset($_POST['createAccount'])) {
+
+        $account = $_POST['accountID'];
+        $accountDescription = $_POST['accountDescription'];
+        $accountCategory = $_POST['accountCategory'];
+        $accountNature = $_POST['accountNature'];
+
+        $postingResult = modelCreateNewAccount($account,$accountDescription,$accountCategory,$accountNature);
+
+        $outputList[0]['Result'] = $postingResult;
+
+        echo(json_encode($outputList));
+    }
+    

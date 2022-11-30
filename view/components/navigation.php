@@ -37,7 +37,7 @@ function printNavigationPanel() {
                 </li>
                 <li>
                         <form method = "POST">
-                            <input type="submit" class="btn btn-info text-white" style = "margin-left: 20px" value="Cerrar Sesión"
+                            <input type="submit" class="btn btn-info text-white" style = "margin-left: 20px" value="Log Out"
                             id="btnCerrarSesion" name="btnCerrarSesion">
                         </form>
                 </li>

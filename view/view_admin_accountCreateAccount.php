@@ -1,6 +1,6 @@
 <?php
     include_once 'components/navigation.php';
-    include_once '../controller/controller_activo.php';
+    include_once '../controller/controller_cuenta.php';
     include_once '../controller/controller_usuario.php';
 ?>
 
@@ -44,9 +44,9 @@
                 <div class="container separator">
                     <div class="row offset-md-3" style="width: 50%">
 
-                        <p class = "text-muted">Complete all the information required to create a new GL Account</p>
+                        <p class="text-muted">Complete all the information required to create a new GL Account</p>
 
-                        <form action="POST" class="form">
+                        <div>
                             <label for="txtGLACcount">GL Account</label>
                             <input type="text" id="txtGLAccount" name="txtGLAccount"
                                 placeholder='follow the correct format' class="form-control" required>
@@ -59,13 +59,13 @@
 
                             <br><br>
 
-                            <label for="selNatureSelect">Account Nature</label>
-                            <select name="selNatureSelect" id="selNatureSelect" class="form-control">
-                                <option value="1">Activos</option>
-                                <option value="2">Pasivos</option>
+                            <label for="selNatureSelect">Account Category</label>
+                            <select name="selCategorySelect" id="selCategorySelect" class="form-control">
+                                <option value="1">Assets</option>
+                                <option value="2">Liabilities</option>
                                 <option value="3">Capital</option>
-                                <option value="4">Ingresos</option>
-                                <option value="5">Gastos</option>
+                                <option value="4">Income</option>
+                                <option value="5">Expenses</option>
                             </select>
 
                             <br><br>
@@ -79,10 +79,11 @@
                             <br>
 
                             <div class="text-center">
-                                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add Account</button>
+                                <button class="btn btn-primary" id="btnSaveAccount" name="btnSaveAccount" onclick = "createAccount()"><i
+                                        class="fa-solid fa-plus"></i> Add Account</button>
                             </div>
 
-                        </form>
+                        </div>
 
                     </div>
                 </div>
@@ -99,8 +100,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 
+    <script src="../vendor/sweetAlert/sweetAlert.js"></script>
+
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
+    <script src="../custom components/js/custom sweetAlerts.js"></script>
+    <script src="../custom components/js/js_admin_accountCreateAccount.js"></script>
+    
 
 
 </body>

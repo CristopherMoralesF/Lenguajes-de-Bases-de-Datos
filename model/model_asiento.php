@@ -46,34 +46,34 @@
     //Create function to load the body of a journal based on the ID. 
     function modelJournalBody($journalID) {
 
-        //Open DataBase Connection
-        $conn = openOracleConnection();
+         //Open DataBase Connection
+         $conn = openOracleConnection();
 
-        //Create query string
-        $stmt = "BEGIN
-            RESUMEN_ASIENTO_LINEAS(:IN_ASIENTO_ID,:OUT_RESUMEN_ASIENTO);
-        END;";
-
-        //Execute the statement
-        $stmt = oci_parse($conn,$stmt);
-
-        oci_bind_by_name($stmt,":IN_ASIENTO_ID",$journalID,8,OCI_B_INT);
-
-        //Create the cursor
-        $journalBodyResume = oci_new_cursor($conn);
-
-        //Bind the cursor resource to the Oracle argument
-        oci_bind_by_name($stmt,":OUT_RESUMEN_ASIENTO",$journalBodyResume,-1,OCI_B_CURSOR);
-
-        //Execute the statement
-        oci_execute($stmt);
-
-        //Execute the cursor
-        oci_execute($journalBodyResume);
-
-        closeOracleConnection($conn);
-
-        return $journalBodyResume;
+         //Create query string
+         $stmt = "BEGIN
+            RESUMEN_ASIENTO_LINEAS_BODY(:IN_ASIENTO_ID,:OUT_RESUMEN_ASIENTO);
+         END;";
+ 
+         //Execute the statement
+         $stmt = oci_parse($conn,$stmt);
+ 
+         oci_bind_by_name($stmt,":IN_ASIENTO_ID",$journalID,8,OCI_B_INT);
+ 
+         //Create the cursor
+         $journalBodyResume = oci_new_cursor($conn);
+ 
+         //Bind the cursor resource to the Oracle argument
+         oci_bind_by_name($stmt,":OUT_RESUMEN_ASIENTO",$journalBodyResume,-1,OCI_B_CURSOR);
+ 
+         //Execute the statement
+         oci_execute($stmt);
+ 
+         //Execute the cursor
+         oci_execute($journalBodyResume);
+ 
+         closeOracleConnection($conn);
+ 
+         return $journalBodyResume;
 
 
 
