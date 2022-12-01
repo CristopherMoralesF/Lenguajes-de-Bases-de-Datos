@@ -39,6 +39,51 @@
                 <h1 class="mt-4">Admin</h1>
                 <h4 class="text-muted">Create Class</h4>
 
+                <div class="container separator">
+                    <div class="row offset-md-3" style="width: 50%">
+
+                        <p class="text-muted">Complate all the information required to create a new class</p>
+
+                        <div>
+                            <label for="txtclassDescription">Class Description</label>
+                            <input type="text" id="txtclassDescription" name=txtclassDescription class="form-control" placeholder = "Indicate the class description">
+
+                            <br><br>
+
+                            <label for="selAssetAccount">Asset Account</label>
+                            <select name="selAssetAccount" id="selAssetAccount" class="form-control">
+                                <!-- load options with JS -->
+                            </select>
+
+                            <br><br>
+
+                            <label for="selAccumDepAccount">Accumulated Depreciation Account</label>
+                            <select name="selAccumDepAccount" id="selAccumDepAccount" class="form-control">
+                                <!-- load options with JS -->
+                            </select>
+
+                            <br><br>
+
+                            <label for="selExpenseAccount">Expense Account</label>
+                            <select name="selExpenseAccount" id="selExpenseAccount" class="form-control">
+                                <!-- load options with JS -->
+                            </select>
+
+                            <br>
+
+                            <div class="text-center">
+                                <button class="btn btn-primary" id="btnSaveClass" name="btnSaveClass" onclick = "createClass()">
+                                    <i class="fa-solid fa-plus"></i> Add Class
+                                </button>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
 
             </div>
     </div>
@@ -52,8 +97,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 
+    <script src="../vendor/sweetAlert/sweetAlert.js"></script>
+    
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
+    <script src="../custom components/js/custom sweetAlerts.js"></script>
+    <script src="../custom components/js/js_admin_classCreateClass.js"></script>
 
 
 </body>

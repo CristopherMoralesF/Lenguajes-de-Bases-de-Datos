@@ -66,6 +66,7 @@
                                 <option value="3">Capital</option>
                                 <option value="4">Income</option>
                                 <option value="5">Expenses</option>
+                                <option value="6">Complementary Assets</option>
                             </select>
 
                             <br><br>

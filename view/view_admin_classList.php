@@ -39,6 +39,19 @@
                 <h1 class="mt-4">Admin</h1>
                 <h4 class="text-muted">Classes List</h4>
 
+                <table class="table table-striped">
+                    <thead class="text-center table-striped thead-dark">
+                        <th>Class Description</th>
+                        <th>Asset Account</th>
+                        <th>Accumulated Depreciation Account</th>
+                        <th>Expense Account</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody id="tblClassesResume" name = tblClassesResume>
+                        <!-- Information is comming with a JS function -->
+                    </tbody>
+                </table>
+
 
             </div>
     </div>
@@ -54,6 +67,7 @@
 
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
+    <script src="../custom components/js/js_admin_classList.js"></script>
 
 
 </body>

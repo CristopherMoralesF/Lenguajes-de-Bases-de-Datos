@@ -16,6 +16,19 @@
         
     }
 
+    function modelAccountsByCategory($idCategory){
+
+        $instance = openOracleConnection();
+        $sqlQuery = oci_parse($instance,"SELECT * FROM ACCOUNTS_RESUME WHERE ID_CATEGORIA = $idCategory");
+
+        oci_execute($sqlQuery);
+
+        closeOracleConnection($instance);
+
+        return $sqlQuery;
+        
+    }
+
     //Create a function to get a balance resume for each account
     function modelAccountBalanceResume(){
 
@@ -52,6 +65,8 @@
 
         //Execute the stmt
         oci_execute($stmt);
+
+        closeOracleConnection($conn);
 
         return $response;
         

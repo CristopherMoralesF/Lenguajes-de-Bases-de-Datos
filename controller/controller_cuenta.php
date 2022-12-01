@@ -14,6 +14,7 @@
 
             $outputList[$i]['ID_CUENTA'] = $account['ID_CUENTA'];
             $outputList[$i]['DESCRIPCION_CUENTA'] = $account['DESCRIPCION_CUENTA'];
+            $outputList[$i]['ID_CATEGORIA'] = $account['ID_CATEGORIA'];
             $i++;
         }
 
@@ -21,7 +22,6 @@
         echo(json_encode($outputList));
 
     }
-    
 
     #Create a JSON reply to Frond End with the balance resume
     if(isset($_GET['getAccountBalanceResume'])){
