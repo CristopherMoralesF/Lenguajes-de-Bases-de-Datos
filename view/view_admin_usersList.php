@@ -40,7 +40,7 @@
                 <h4 class="text-muted" id="users_list" name="users_list">User List</h4>
             <div action="view_admin_usersList.php" method="get">
 
-            <?php mostrarDatos($cursor) ?>
+            <?php mostrarDatos($cursorC) ?>
             </div>
 
             </div>

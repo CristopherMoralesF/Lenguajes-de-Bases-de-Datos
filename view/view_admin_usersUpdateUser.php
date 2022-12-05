@@ -36,11 +36,53 @@
         <main>
             <div class="container-fluid px-4">
 
-                <h1 class="mt-4">Admin</h1>
-                <h4 class="text-muted">Update User</h4>
+            
+
+<h1 class="mt-4">Admin</h1>
+<h4 class="text-muted">Update User</h4>
+
+<form method="POST" action="view_admin_usersUpdateUser.php" name="form">
+<div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Buscar id Usuario</label>
+        <input name="idbuscar"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <button type="submit" name="buscar_usuario"class="btn btn-primary">Buscar </button>
+    </div>
 
 
-            </div>
+</form>
+
+<form method="POST" action="view_admin_usersUpdateUser.php">
+    <input type="text" name="id" value="<?php echo (isset($id_out))?$id_out:'';?>" >
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+        <input name="nombre"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo (isset($nombre))?$nombre:'';?>">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input name="email"  type="email" class="form-control" id="exampleInputPassword1" value="<?php echo (isset($correo))?$correo:'';?>">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input name="password"  type="password" class="form-control" id="exampleInputPassword1"  value="<?php echo (isset($password))?$password:'';?>" >
+    </div>
+
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">Role</label>
+        <select name="role" id="role" class="form-select">
+            <option>ADMIN</option>
+            <option>CONTADOR</option>
+            <option>TAGGER</option>
+        </select>
+    </div>
+  <br>
+    <button type="submit" name="alter_usuario"class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+            
     </div>
 
     <!-- External vendor JS codes -->

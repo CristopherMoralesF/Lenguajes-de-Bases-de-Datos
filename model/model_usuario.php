@@ -65,7 +65,9 @@ echo "</table>";
         $sql = 'BEGIN  validar_usuarios(:correo ,:id,:password ,:nombre,:role ,:alerta); END;';
         
         $stmt = oci_parse($conn,$sql);
-        
+       
+       
+
         oci_bind_by_name($stmt,':correo',$correo,32);
         
         oci_bind_by_name($stmt,':id',$id,32);
@@ -80,17 +82,18 @@ echo "</table>";
 
         
          oci_execute($stmt);
-
-         session_start();
+     
+        session_start();
          
-         $_SESSION['nombre'] =$nombre;
-         $_SESSION['role'] = $role;
-         $_SESSION['id_usuario'] = $id;
-         
+        $_SESSION['nombre'] =$nombre;
+        $_SESSION['role'] = $role;
+        $_SESSION['id_usuario'] = $id;
+        
 
-         session_write_close();
-
+        session_write_close();
        return $alerta;
+
+
 
     }
 
@@ -121,6 +124,68 @@ echo "</table>";
 
     }
 
+    function alterarUsuario($id,$nombre,$correo , $password,$role)
+    {
+        $conn=openOracleConnection();
+ 
+        $sql = 'BEGIN  alter_usuario(:id,:nombre,:correo ,:password ,:role ,:alerta); END;';
+        
+        $stmt = oci_parse($conn,$sql);
+
+        oci_bind_by_name($stmt,':id',$id,32);
+        
+        oci_bind_by_name($stmt,':nombre',$nombre,32);
+
+        oci_bind_by_name($stmt,':correo',$correo,32);
+        
+       
+        oci_bind_by_name($stmt,':password',$password,32);
+        
+        
+        
+        oci_bind_by_name($stmt,':role',$role,32);
+        
+        oci_bind_by_name($stmt,':alerta',$alerta,32);
+
+        
+         oci_execute($stmt);
+
+
+       return $alerta;
+
+    }
+
+
+
+
+
+    function buscarUsuario($id)
+    {
+        $conn=openOracleConnection();
+ 
+        $sql = 'BEGIN  BUSCAR_USUARIO_POR_ID(:id,:id_out,:nombre ,:correo ,:password ,:alerta); END;';
+        
+        $stmt = oci_parse($conn,$sql);
+        
+        oci_bind_by_name($stmt,':id',$id,32);
+        oci_bind_by_name($stmt,':id_out',$id_out,32);
+        oci_bind_by_name($stmt,':nombre',$nombre,32);
+
+        oci_bind_by_name($stmt,':correo',$correo,32);
+        
+       
+        oci_bind_by_name($stmt,':password',$password,32);
+        
+        
+        oci_bind_by_name($stmt,':alerta',$alerta,32);
+
+        
+         oci_execute($stmt);
+
+
+       return [$id_out,$nombre,$correo,$password,$alerta];
+
+    }
 
 
 
@@ -143,4 +208,5 @@ echo "</table>";
    return $p_cursor;
 
     } 
+
 ?>

@@ -1,7 +1,8 @@
 <?php
 
     include_once '../model/model_usuario.php';
-    $cursor=MostrarTablaCursor();
+    $cursorC=MostrarTablaCursor();
+    
     $mensaje;
     if(isset($_POST['btn_login'])){
 
@@ -12,13 +13,20 @@
         $validacion=validar_usuarios($correo , $password);
        if($validacion=="Se ha logrado ingresar"){
         
-        Header("Location: ../view/view_home.php");
+        Header('Location: ../view/view_home.php');
     }
-    else{
-      echo'<div class="'.'alert alert-danger'.'" role="'.'alert'.'">
+    else if($validacion=='No se ha logrado ingresar'){
+   echo'<div class="'.'alert alert-danger'.'" role="'.'alert'.'">
     '.$validacion.'
   </div>';
+
+
+
+
+;
+
 }
+
 }
 
 
@@ -36,6 +44,50 @@ if(isset($_POST['guardar_usuario'])){
 }
 else if($mensaje=="Estos datos coinciden con un usuario de la base de datos") {
   echo '<script language="javascript">alert("'.$mensaje.'");</script>';
+  
+}
+
+}
+
+if(isset($_POST['alter_usuario'])){
+  $id = $_POST['id'];
+  $nombre = $_POST['nombre'];
+  $correo = $_POST['email'];
+  $password   = $_POST['password'];
+  $role = $_POST['role'];
+//Validacion es alerta que returna en el metodo 
+  $mensaje=alterarUsuario($id,$nombre,$correo , $password ,$role);
+ if($mensaje=="Se ha logrado alterar correctamente el usuario"){
+  
+  echo '<script language="javascript">alert("'.$mensaje.'");</script>';
+}
+else if($mensaje=="No se encontro usuario") {
+  echo '<script language="javascript">alert("'.$mensaje.'");</script>';
+  
+}
+
+}
+
+
+if(isset($_POST['buscar_usuario'])){
+
+  $id = $_POST['idbuscar'];
+ 
+ 
+//Validacion es alerta que returna en el metodo 
+  
+list($id_out,$nombre,$correo,$password,$alerta)=buscarUsuario($id);
+
+
+ if($alerta=="Se ha encontrado Usuario"){
+  
+  echo '<script language="javascript">alert("'.$alerta.'");</script>';
+
+
+}
+else if($alerta=="No se ha logrado encontrar usuario") {
+  echo '<script language="javascript">alert("'.$alerta.'");</script>';
+  
 }
 
 }
@@ -44,10 +96,10 @@ else if($mensaje=="Estos datos coinciden con un usuario de la base de datos") {
 
   
 
-function mostrarDatos($cursor)
+function mostrarDatos($cursorC)
 {
-  oci_execute($cursor);  
-  while (($row = oci_fetch_array($cursor, OCI_ASSOC+OCI_RETURN_NULLS)) != false) {
+  oci_execute($cursorC);  
+  while (($row = oci_fetch_array($cursorC, OCI_ASSOC+OCI_RETURN_NULLS)) != false) {
 
 
       echo'<table class="table">
@@ -71,7 +123,7 @@ function mostrarDatos($cursor)
     </table>';
   }
   
-  oci_free_statement($cursor);
+  oci_free_statement($cursorC);
 }
 
 ?>

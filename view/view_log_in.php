@@ -32,7 +32,7 @@
             </div>
 
             <!-- Login Form -->
-            <form method = "POST" action="view_home.php">
+            <form method = "POST" action="view_log_in.php">
                 <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
                 <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                 <input type="submit" class="fadeIn fourth" name = "btn_login" id = "btn_login" value="Log In">
@@ -53,6 +53,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 
