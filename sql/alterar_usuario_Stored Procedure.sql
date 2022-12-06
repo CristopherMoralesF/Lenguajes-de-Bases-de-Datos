@@ -72,7 +72,7 @@ CREATE OR REPLACE PROCEDURE
 
 
 CREATE OR REPLACE FUNCTION BUSCAR_USUARIO_POR_ID( var_id_usuario in number)
-return SYS_REFCURSOR
+    return SYS_REFCURSOR
 as
 c_usuarios SYS_REFCURSOR;
                         

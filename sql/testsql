@@ -1,3 +1,5 @@
+SET SERVEROUTPUT ON; 
+
 -- Create a procedure that validates the log in
 CREATE OR REPLACE PROCEDURE VALIDAR_USUARIOS(
         IN_CORREO           IN VARCHAR2,
@@ -51,23 +53,3 @@ BEGIN
     VALIDAR_USUARIOS(VAR_CORREO,VAR_ID_USUARIO,VAR_USER_PASSWORD,VAR_NOMBRE,VAR_ROLE,VAR_ALETAR);
     DBMS_OUTPUT.PUT_LINE(VAR_ALETAR);
 END;    
-
----Buscar por id usuario
-
- CREATE OR REPLACE PROCEDURE 
- Buscar_por_id_usuarios (var_id_usuarios in number,imprimir OUT VARCHAR2) 
- AS
- var_usuario usuario%rowtype;                                                       
- BEGIN
- SELECT Nombre ,Correo 
- into var_usuario.nombre,var_usuario.correo 
- from usuario where id_usuario=var_id_usuarios;
- 
- 
- 
- imprimir := 'Nombre ' || var_usuario.nombre ||' Correo '|| var_usuario.correo ;
- 
- END;
-
-
- 
