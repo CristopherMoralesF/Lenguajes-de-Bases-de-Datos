@@ -47,4 +47,50 @@
 
     }
 
+    // --------------------------------------- Functions related to classes validations ---------------------------------------
+    //Load list of validations
+    function modelClassesValidationList(){
+
+        //Open connection with the data base
+        $conn = openOracleConnection();
+
+        //create the query to call the information
+        $sqlQuery = oci_parse($conn,'SELECT * FROM VALIDACIONES_RESUME');
+
+        //Execute query
+        oci_execute($sqlQuery);
+
+        //Close connection
+        closeOracleConnection($conn);
+
+        //Return query result
+        return $sqlQuery;
+     
+    }
+
+    //Create a new validation
+    function modelCreateNewValidation($classID,$validationDescription){
+
+        $conn = openOracleConnection();
+
+        //Create the SQL Query
+        $sqlQuery = "BEGIN PK_CLASSES_VALIDATIONS.CREATE_CLASS_VALIDATION(:VAR_CLASS_ID,:VAR_VALIDATION_DESCRIPTION,:VAR_RESULT); END;";
+
+        //Execute the SQL Query
+        $stmt = oci_parse($conn,$sqlQuery);
+
+        //Create variables values
+        oci_bind_by_name($stmt,':VAR_CLASS_ID',$classID,32);
+        oci_bind_by_name($stmt,':VAR_VALIDATION_DESCRIPTION',$validationDescription,32);
+        oci_bind_by_name($stmt,':VAR_RESULT',$response,32);
+
+        //Execute the stmt
+        oci_execute($stmt);
+
+        closeOracleConnection($conn);
+
+        return $response;
+
+    }
+
 ?>

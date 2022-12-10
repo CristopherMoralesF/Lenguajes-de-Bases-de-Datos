@@ -40,4 +40,38 @@
         
     }
 
+    // --------------------------------------- Functions related to classes validations ---------------------------------------
+    //Generate list of validations for each class.
+    if(isset($_GET['classesValidationList'])){
+
+        $validationsList = modelClassesValidationList();
+        $i = 0;
+
+        while($validation = oci_fetch_array($validationsList,OCI_ASSOC+OCI_RETURN_NULLS)){
+
+            $outputList[$i]['ID_TIPO_VALIDACION'] = $validation['ID_TIPO_VALIDACION'];
+            $outputList[$i]['ID_CLASE'] = $validation['ID_CLASE'];
+            $outputList[$i]['DESCRIPCION_VALIDACION'] = $validation['DESCRIPCION_VALIDACION'];
+            $outputList[$i]['DESCRIPCION_CLASE'] = $validation['DESCRIPCION_CLASE'];
+            $i++;
+        }
+
+        echo(json_encode($outputList));
+
+    }
+
+    //Create new validation
+    if(isset($_POST['createValidation'])){
+
+        $classID = $_POST['classID'];
+        $validationDescription = $_POST['validationDescription'];
+
+        $creationResult = modelCreateNewValidation($classID,$validationDescription);
+
+        $outputList[0]['Result'] = $creationResult;
+
+        echo(json_encode($outputList));
+        
+    }
+
 ?>

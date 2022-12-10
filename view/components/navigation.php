@@ -165,8 +165,9 @@ function addAdminFuntionalities($role){
             <nav class="sb-sidenav-menu-nested nav">
                 <a class="nav-link" href="../view/view_admin_classList.php">Classes List</a>
                 <a class="nav-link" href="../view/view_admin_classCreateClass.php">Create Class</a>
+                <a class="nav-link" href="../view/view_admin_classValidations.php">Class Validations</a>
             </nav>
-        </div>
+        </div>     
         ';
 
     } else {
