@@ -22,6 +22,35 @@
         //Convert the list to json and return it to the JS file
         echo (json_encode($outputList));
     }
+
+    #Create a JSON reply to Frond End to create a table with the assets resume
+    if(isset($_GET['AssetResume'])){
+
+        #load list of assets 
+        $assets = modelAssetsResume();
+        $i = 0;
+
+        #Create a list with the items
+        while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+            $outputList[$i]['ID_ACTIVO'] = $asset["ID_ACTIVO"];
+            $outputList[$i]['DESCRIPCION_ACTIVO'] = $asset["DESCRIPCION_ACTIVO"];
+            $outputList[$i]['VALOR_ADQUISICION'] = $asset["VALOR_ADQUISICION"];
+            $outputList[$i]['FECHA_ADQUISICION'] = $asset["FECHA_ADQUISICION"];
+            $outputList[$i]['DESCRIPCION_CLASE'] = $asset["DESCRIPCION_CLASE"];
+            $outputList[$i]['VIDA_UTIL'] = $asset["VIDA_UTIL"];
+            $outputList[$i]['PERIODOS_DEPRECIADOS'] = $asset["PERIODOS_DEPRECIADOS"];
+            $outputList[$i]['ID_EDIFICIO'] = $asset["ID_EDIFICIO"];
+            $outputList[$i]['DESCRIPCION_SECCION'] = $asset["DESCRIPCION_SECCION"];
+            $outputList[$i]['NOMBRE'] = $asset["NOMBRE"];
+            $outputList[$i]['DESCRIPCION_ESTADO'] = $asset["DESCRIPCION_ESTADO"];
+            $i++;
+        
+        }
+
+        //Convert the list to json and return it to the JS file
+        echo (json_encode($outputList));
+    }
     
     #Create a JSON reply with the resume of the indicators
     if(isset($_GET['AssetIndResume'])){

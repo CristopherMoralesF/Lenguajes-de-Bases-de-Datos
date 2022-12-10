@@ -12,6 +12,16 @@
         return $sqlQuery;
     }
 
+    //Create a function to load a full list of assets
+    function modelAssetsResume(){
+
+        $instance = openOracleConnection();
+        $sqlQuery = oci_parse($instance,'SELECT * FROM ASSETS_RESUME');
+        oci_execute($sqlQuery);
+
+        return $sqlQuery;
+    }
+
     //Create a function to load the basic stats of an asset
     function modelAssetIndResume(){
 
@@ -25,8 +35,11 @@
 
         //Execute the statement
         $stmt = oci_parse($conn,$stmt);
-
-        $usuarioID = 1;
+        
+        session_start();
+        $usuarioID = $_SESSION['id_usuario'];
+        session_write_close();
+        
         oci_bind_by_name($stmt,":IN_USER_ID",$usuarioID,8,OCI_B_INT);
 
         // Create a new cursor resource

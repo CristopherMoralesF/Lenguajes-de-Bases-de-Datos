@@ -1,7 +1,6 @@
 <?php
     include_once 'components/navigation.php';
-    include_once '../controller/controller_activo.php';
-    include_once '../controller/controller_usuario.php';
+    include_once '../controller/controller_activo.php'
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home</title>
+    <title>Journal Detail</title>
     <link rel="icon" href="../custom components/img/web_icon.png">
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../custom components/css/side-bar.css" rel="stylesheet">
@@ -36,22 +35,32 @@
         <main>
             <div class="container-fluid px-4">
 
-                <h1 class="mt-4">Admin</h1>
-                <h4 class="text-muted">Classes List</h4>
+                <h1 class="mt-4">Tagger</h1>
+                <h4 class="text-muted">Asses Report</h4>
 
-                <table class="table table-striped">
-                    <thead class="text-center table-striped thead-dark">
-                        <th>Class Description</th>
-                        <th>Asset Account</th>
-                        <th>Accumulated Depreciation Account</th>
-                        <th>Expense Account</th>
-                        <th>Usefull Life</th>
-                        <th>Actions</th>
-                    </thead>
-                    <tbody id="tblClassesResume" name = tblClassesResume>
-                        <!-- Information is comming with a JS function -->
-                    </tbody>
-                </table>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <table class="table table-striped" id='journalsResume' name='journalsResume'>
+                                <thead class="text-center table-striped thead-dark">
+                                    <th>Asset Description</th>
+                                    <th>Adquisition Value</th>
+                                    <th>Adquisition Date</th>
+                                    <th>Class Description</th>
+                                    <th>Usefull Life</th>
+                                    <th>Depreciated Months</th>
+                                    <th>Owner</th>
+                                    <th>Edit</th>
+                                </thead>
+                                <tbody id="tableAssetsResume" name="tableAssetsResume">
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
 
 
             </div>
@@ -68,8 +77,7 @@
 
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
-    <script src="../custom components/js/js_admin_classList.js"></script>
-
+    <script src="../custom components/js/js_tagger_assetList.js"></script>
 
 </body>
 

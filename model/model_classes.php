@@ -21,12 +21,12 @@
     }
 
     //Create a function to create a new class
-    function modelCreateNewClass($classDescription,$assetAccount,$accumDepAccount,$expenseAccount){
+    function modelCreateNewClass($classDescription,$assetAccount,$accumDepAccount,$expenseAccount,$usefullLife){
 
         $conn = openOracleConnection();
 
         //Create the SQL Query
-        $sqlQuery = "BEGIN CREATE_CLASS(:VAR_CLASS_DESCRIPTION,:VAR_ASSET_ACCOUNT,:VAR_DEP_ACUM_ACCOUNT,:VAR_EXPENSE_ACCOUNT,:VAR_RESULT); END;";
+        $sqlQuery = "BEGIN CREATE_CLASS(:VAR_CLASS_DESCRIPTION,:VAR_ASSET_ACCOUNT,:VAR_DEP_ACUM_ACCOUNT,:VAR_EXPENSE_ACCOUNT,:VAR_USEFULL_LIFE,:VAR_RESULT); END;";
 
         //Execute the SQL Query
         $stmt = oci_parse($conn,$sqlQuery);
@@ -36,6 +36,7 @@
         oci_bind_by_name($stmt,':VAR_ASSET_ACCOUNT',$assetAccount,32);
         oci_bind_by_name($stmt,':VAR_DEP_ACUM_ACCOUNT',$accumDepAccount,32);
         oci_bind_by_name($stmt,':VAR_EXPENSE_ACCOUNT',$expenseAccount,32);
+        oci_bind_by_name($stmt,':VAR_USEFULL_LIFE',$usefullLife,32);
         oci_bind_by_name($stmt,':VAR_RESULT',$response,32);
 
         //Execute the stmt

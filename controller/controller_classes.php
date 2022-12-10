@@ -17,6 +17,7 @@
             $outputList[$i]['CUENTA_ACTIVO'] = $class['CUENTA_ACTIVO'];
             $outputList[$i]['CUENTA_DEP_ACUMULADA'] = $class['CUENTA_ACTIVO'];
             $outputList[$i]['CUENTA_GASTO'] = $class['CUENTA_GASTO'];
+            $outputList[$i]['VIDA_UTIL'] = $class['VIDA_UTIL'];
             $i++;
         }
 
@@ -31,8 +32,9 @@
         $assetAccount = $_POST['assetAccount'];
         $accumDepAccount = $_POST['accumDepAccount'];
         $expenseAccount = $_POST['expenseAccount'];
+        $usefullLife = $_POST['usefullLife'];
 
-        $creationResult = modelCreateNewClass($classDescription,$assetAccount,$accumDepAccount,$expenseAccount);
+        $creationResult = modelCreateNewClass($classDescription,$assetAccount,$accumDepAccount,$expenseAccount,$usefullLife);
 
         $outputList[0]['Result'] = $creationResult;
 

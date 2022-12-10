@@ -69,6 +69,11 @@
                                 <!-- load options with JS -->
                             </select>
 
+                            <br><br>
+
+                            <label for="txtvidaUtil">Usefull Life</label>
+                            <input type="number" id="txtvidaUtil" name=txtvidaUtil class="form-control" placeholder = "Indicate usefull life for the class">
+
                             <br>
 
                             <div class="text-center">

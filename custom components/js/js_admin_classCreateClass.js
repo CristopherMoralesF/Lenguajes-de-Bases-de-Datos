@@ -47,9 +47,10 @@ function createClass() {
     var assetAccount = dropAssetAccount.options[dropAssetAccount.selectedIndex].value;
     var AcuDepAccount = dropAcuDepAccount.options[dropAcuDepAccount.selectedIndex].value;
     var expenseAccount = dropExpenseAccount.options[dropExpenseAccount.selectedIndex].value;
+    var usefullLife = document.getElementById('txtvidaUtil').value;
 
     if (classDescription.length <= 0 || assetAccount.length <= 0
-        || AcuDepAccount.length <= 0  || expenseAccount.length <= 0) {
+        || AcuDepAccount.length <= 0  || expenseAccount.length <= 0 || usefullLife.length <= 0) {
         errroMessageStatus('Pending information, please complete all the fields')
     } else if (classDescription.length > 50 || assetAccount.length > 15
             || AcuDepAccount.length > 15 || expenseAccount.length > 15) {
@@ -64,7 +65,8 @@ function createClass() {
                 'classDescription': classDescription,
                 'assetAccount':assetAccount,
                 'accumDepAccount':AcuDepAccount,
-                'expenseAccount':expenseAccount
+                'expenseAccount':expenseAccount,
+                'usefullLife':usefullLife
             }, success: function (data) {
 
                 let outputList = $.parseJSON(data);

@@ -86,9 +86,8 @@ function addTaggerFunctionalities($role){
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                         data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="view_tagger_assetList.php">Asset List</a>    
                             <a class="nav-link" href="layout-static.html">New Assets</a>
-                            <a class="nav-link" href="../view/assetTypes.php"> Asset Types</a>
-                            <a class="nav-link" href="../assetTypes.php">Asset List</a>
                         </nav>
                     </div>';
     } else {
