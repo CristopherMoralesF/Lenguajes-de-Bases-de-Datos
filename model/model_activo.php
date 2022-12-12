@@ -60,4 +60,36 @@
  
     }
 
+    //Create a function to create a new asset
+    function createAsset($idClass,$idlocation,$idOwner,$idState,$assetDescription,$value,$date){
+
+        $conn = openOracleConnection();
+
+        $sqlQuery = "BEGIN
+                    CREATE_ASSET(:IN_ID_CLASE,:IN_ID_UBICACION,:IN_ID_OWNER,:IN_ID_ESTADO,:IN_DESCRIPCION,:IN_VALOR,:IN_FECHA,:OUT_RESULT);
+                END;";
+
+        //Execute the SQL Query
+        $stmt = oci_parse($conn,$sqlQuery);
+        
+        //Create variables values
+        oci_bind_by_name($stmt,':IN_ID_CLASE',$idClass,32);
+        oci_bind_by_name($stmt,':IN_ID_UBICACION',$idlocation,32);
+        oci_bind_by_name($stmt,':IN_ID_OWNER',$idOwner,32);
+        oci_bind_by_name($stmt,':IN_ID_ESTADO',$idState,32);
+        oci_bind_by_name($stmt,':IN_DESCRIPCION',$assetDescription,32);
+        oci_bind_by_name($stmt,':IN_VALOR',$value,32);
+        oci_bind_by_name($stmt,':IN_FECHA',$date,32);
+        oci_bind_by_name($stmt,':OUT_RESULT',$response,32);
+
+        //Execute the stmt
+        oci_execute($stmt);
+
+        //Execute the stmt
+        closeOracleConnection($conn);
+
+        return $response;
+
+    }
+
 ?>

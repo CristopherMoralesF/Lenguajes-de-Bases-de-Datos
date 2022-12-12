@@ -21,7 +21,6 @@ function getClassesResume(){
                 tableRow += '<td>' + outputList[i]['CUENTA_DEP_ACUMULADA'] + '</td>'
                 tableRow += '<td>' + outputList[i]['CUENTA_GASTO'] + '</td>'
                 tableRow += '<td>' + outputList[i]['VIDA_UTIL'] + '</td>'
-                tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_accounting_journalsReport_journalDetails.php?journalID=' + outputList[i]['ID_CLASE'] + '"><i class="fa-solid fa-pencil" style = "color: white;"></i></a></td>'
                 tableRow += '</tr>'
 
             }

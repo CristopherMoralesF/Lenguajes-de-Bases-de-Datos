@@ -46,7 +46,6 @@
                         <th>Accumulated Depreciation Account</th>
                         <th>Expense Account</th>
                         <th>Usefull Life</th>
-                        <th>Actions</th>
                     </thead>
                     <tbody id="tblClassesResume" name = tblClassesResume>
                         <!-- Information is comming with a JS function -->

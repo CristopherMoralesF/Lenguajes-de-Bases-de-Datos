@@ -82,4 +82,23 @@
 
     }
 
+    #Function to create a new asset
+    if(isset($_POST['createAsset'])){
+
+        $idClass = $_POST['idClass'];
+        $idlocation = $_POST['idlocation'];
+        $idOwner = $_POST['idOwner'];
+        $idState = $_POST['idState'];
+        $assetDescription = $_POST['assetDescription'];
+        $value = $_POST['value'];
+        $date = $_POST['date'];
+
+        $createAsset = createAsset($idClass,$idlocation,$idOwner,$idState,$assetDescription,$value,$date);
+
+        $outputList[0]['Result'] = $createAsset;
+
+        echo(json_encode($outputList));
+
+    }
+
 ?>

@@ -126,4 +126,26 @@ function mostrarDatos($cursorC)
   oci_free_statement($cursorC);
 }
 
+if(isset($_GET['user_list'])){
+
+  #Load list of users
+  $users = modelConsultarUsuario();
+  $i = 0;
+
+  #Create a list with users information
+  while($user = oci_fetch_array($users,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+    $outputList[$i]['ID_USUARIO'] = $user["ID_USUARIO"];
+    $outputList[$i]['NOMBRE'] = $user["NOMBRE"];
+    $outputList[$i]['CORREO'] = $user["CORREO"];
+    $outputList[$i]['ID_ROLE'] = $user["ID_ROLE"];
+    $i++;
+ 
+ }
+
+ //Convert the list to json and return it to the JS file
+ echo (json_encode($outputList));
+
+}
+
 ?>
