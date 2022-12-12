@@ -145,33 +145,68 @@ function createAsset() {
         errroMessageStatus('Pending information, please complete all the fields')
         return;
     }
-    
-    $.ajax({
-        type: 'POST',
-        url: '../controller/controller_activo.php',
-        data: {
-            'createAsset':'createAsset',
-            'idClass': assetClass,
-            'idlocation': assetLocation,
-            'idOwner': assetOwner,
-            'idState': assetState,
-            'assetDescription': assetDescription,
-            'value': assetValue,
-            'date': assetDate
-        }, success: function (data) {
 
-            let outputList = $.parseJSON(data);
-            let response = outputList[0]['Result'];
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    });
 
-            if (response == 'Successful') {
-                successMessageStatus('Asset created!');
-            } else {
-                errroMessageStatus(response)
-            }
 
-        }, error: function (data) {
-            errroMessageStatus('Error calling the data, review your connection');
+    swalWithBootstrapButtons.fire({
+        title: 'Are you sure?',
+        text: "The creation of the asset will generate an accounting impact!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, create it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: false
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+
+            $.ajax({
+                type: 'POST',
+                url: '../controller/controller_activo.php',
+                data: {
+                    'createAsset': 'createAsset',
+                    'idClass': assetClass,
+                    'idlocation': assetLocation,
+                    'idOwner': assetOwner,
+                    'idState': assetState,
+                    'assetDescription': assetDescription,
+                    'value': assetValue,
+                    'date': assetDate
+                }, success: function (data) {
+
+                    let outputList = $.parseJSON(data);
+                    let response = outputList[0]['Result'];
+
+                    if (response == 'Successful') {
+                        successMessageStatus('Asset created!');
+                    } else {
+                        errroMessageStatus(response)
+                    }
+
+                }, error: function (data) {
+                    errroMessageStatus('Error calling the data, review your connection');
+                }
+            })
+
+        } else if (
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'The asset information was not saved',
+                'error'
+            )
         }
+
     })
+
+
 
 }

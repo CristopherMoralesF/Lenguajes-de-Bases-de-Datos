@@ -101,4 +101,24 @@
 
     }
 
+    //Get a resume of the validations done for one asset
+    if(isset($_POST['assetValidationResume'])){
+
+        $idActivo =$_POST['idActivo'];
+
+        $validationList = validationsResume($idActivo);
+        $i = 0;
+
+        while($validation = oci_fetch_array($validationList,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+            $outputList[$i]['DESCRIPCION_VALIDACION'] = $validation["DESCRIPCION_VALIDACION"];
+            $outputList[$i]['VALOR'] = $validation["VALOR"];
+            $i++;
+         
+         }
+
+         echo(json_encode($outputList));
+
+    }
+
 ?>

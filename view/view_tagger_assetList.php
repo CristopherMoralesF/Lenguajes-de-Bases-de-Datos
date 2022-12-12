@@ -45,8 +45,8 @@
                             <table class="table table-striped" id='journalsResume' name='journalsResume'>
                                 <thead class="text-center table-striped thead-dark">
                                     <th>Asset Description</th>
-                                    <th>Adquisition Value</th>
-                                    <th>Adquisition Date</th>
+                                    <th>Acquisition Value</th>
+                                    <th>Acquisition Date</th>
                                     <th>Class Description</th>
                                     <th>Usefull Life</th>
                                     <th>Depreciated Months</th>

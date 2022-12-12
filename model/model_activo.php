@@ -92,4 +92,35 @@
 
     }
 
+    //Create a function to bring the validations completed by one of the assets. 
+    function validationsResume($assetID){
+
+        $conn = openOracleConnection();
+
+        $sqlQuery = "BEGIN
+                        VALIDATE_RESUME_BY_ASSET(:IN_ASSET_ID,:OUT_RESULT);
+                    END;";
+
+        //Execute the SQL Query
+        $stmt = oci_parse($conn,$sqlQuery);
+
+        // Create a new cursor resource
+        $KPI_Resume = oci_new_cursor($conn);
+        
+
+        oci_bind_by_name($stmt,":IN_ASSET_ID",$assetID,32);
+        oci_bind_by_name($stmt,":OUT_RESULT",$KPI_Resume,-1,OCI_B_CURSOR);
+
+        // Execute the statement
+        oci_execute($stmt);
+
+        // Execute the cursor
+        oci_execute($KPI_Resume);
+
+        closeOracleConnection($conn);
+
+        return $KPI_Resume;
+
+    }
+
 ?>

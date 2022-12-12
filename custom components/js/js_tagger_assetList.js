@@ -22,7 +22,7 @@ function assetsReportResume() {
                 tableRow += '<td>' + outputList[i]['VIDA_UTIL'] + '</td>'
                 tableRow += '<td>' + outputList[i]['PERIODOS_DEPRECIADOS'] + '</td>'
                 tableRow += '<td>' + outputList[i]['NOMBRE'] + '</td>'
-                tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_accounting_journalsReport_journalDetails.php?journalID=' + outputList[i]['ID_ACTIVO'] + '"><i class="far fa-eye" style = "color: white;"></i></a></td>'
+                tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_tagger_assetDetails.php?assetID=' + outputList[i]['ID_ACTIVO'] + '"><i class="far fa-eye" style = "color: white;"></i></a></td>'
                 tableRow += '</tr>'
 
             }
