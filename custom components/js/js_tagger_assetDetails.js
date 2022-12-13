@@ -60,17 +60,18 @@ function loadAssetValidations() {
             for (var i = 0; i < outputList.length; i++) {
 
                 tableRow += '<tr>'
+                tableRow += '<td>' + outputList[i]['ID_TIPO_VALIDACION'] + '</td>'
                 tableRow += '<td class = "text-left">' + outputList[i]['DESCRIPCION_VALIDACION'] + '</td>'
-                
+
 
                 if (outputList[i]['VALOR'] == null) {
                     tableRow += '<td>' + 'Pending Information' + '</td>'
-                    tableRow += '<td><button class = "btn btn-primary">' + '<i class="fa-solid fa-plus"></i>' + '</button></td>'
-                    
+                    tableRow += '<td><button class = "btn btn-primary" onclick = addValidationInformation(' + outputList[i]['ID_TIPO_VALIDACION'] + ',' + asssetID + ')>' + '<i class="fa-solid fa-plus"></i>' + '</button></td>'
+
                 } else {
                     tableRow += '<td>' + outputList[i]['VALOR'] + '</td>'
-                    tableRow += '<td><button class = "btn btn-primary">' + '<i class="fa-solid fa-pencil"></i>' + '</button></td>' 
-                    
+                    tableRow += '<td><button class = "btn btn-primary" onclick = updateValidationInformation(' + outputList[i]['ID_TIPO_VALIDACION'] + ',' + asssetID + ')>' + '<i class="fa-solid fa-pencil"></i>' + '</button></td>'
+
                 }
 
                 tableRow += '</tr>'
@@ -79,10 +80,94 @@ function loadAssetValidations() {
 
             document.getElementById('tableAssetValidationsResume').innerHTML = tableRow
 
- 
+
         }, error: function (data) {
             alert("Error calling the data, review your connection")
         }
     })
 
+}
+
+function addValidationInformation(validationID, assetID) {
+
+    (async () => {
+
+        const { value: text } = await Swal.fire({
+            input: 'text',
+            inputLabel: 'Validation Value',
+            inputPlaceholder: 'Enter the validation value'
+        })
+
+        if (text) {
+
+            $.ajax({
+                type: 'POST',
+                url: '../controller/controller_validacion.php',
+                data: {
+                    'completeValidation': 'completeValidation',
+                    'assetID': assetID,
+                    'validationID':validationID,
+                    'value':text
+                }, success: function (data) {
+
+                    let outputList = $.parseJSON(data);
+
+                    if (outputList[0]['Result'].length > 0) {
+                        successMessageStatus('Validation Information Added!')
+                    } else {
+                        errroMessageStatus('Error adding the validation value!')    
+                    }
+                    
+            
+                }, error: function (data) {
+                    errroMessageStatus('Error adding the validation value!')
+                }
+            })
+
+
+        }
+
+    })()
+}
+
+function updateValidationInformation(validationID, assetID) {
+
+    (async () => {
+
+        const { value: text } = await Swal.fire({
+            input: 'text',
+            inputLabel: 'Validation Value',
+            inputPlaceholder: 'Enter the new validation value'
+        })
+
+        if (text) {
+
+            $.ajax({
+                type: 'POST',
+                url: '../controller/controller_validacion.php',
+                data: {
+                    'updateValidation': 'updateValidation',
+                    'assetID': assetID,
+                    'validationID':validationID,
+                    'value':text
+                }, success: function (data) {
+
+                    let outputList = $.parseJSON(data);
+
+                    if (outputList[0]['Result'].length > 0) {
+                        successMessageStatus('Validation Information Added!')
+                    } else {
+                        errroMessageStatus('Error adding the validation value!')    
+                    }
+                    
+            
+                }, error: function (data) {
+                    errroMessageStatus('Error adding the validation value!')
+                }
+            })
+
+
+        }
+
+    })()
 }

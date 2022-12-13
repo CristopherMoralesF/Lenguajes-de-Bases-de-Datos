@@ -123,4 +123,45 @@
 
     }
 
+    //Create a function to run the depreciacion for one of the classes
+    function modelRunDepreciation($idClase,$descripcionJournal){
+
+        $conn = openOracleConnection();
+
+        $sqlQuery = "BEGIN
+                        DEPRECIATION.RUN_DEPRECIATION(
+                            :IN_ID_CLASE,
+                            :IN_JE_DESCRIPCION,
+                            :OUT_RESULT,
+                            :OUT_RESULT_TEXT     
+                        );
+                    END;";
+
+        //Execute the SQL Query
+        $stmt = oci_parse($conn,$sqlQuery);
+
+        // Create a new cursor resource
+        $depreciationResult = oci_new_cursor($conn);
+        
+
+        oci_bind_by_name($stmt,":IN_ID_CLASE",$idClase,32);
+        oci_bind_by_name($stmt,":IN_JE_DESCRIPCION",$descripcionJournal,32);
+        oci_bind_by_name($stmt,":OUT_RESULT_TEXT",$finalJournalID,32);
+        oci_bind_by_name($stmt,":OUT_RESULT",$depreciationResult,-1,OCI_B_CURSOR);
+
+        // Execute the statement
+        oci_execute($stmt);
+
+        // Execute the cursor
+        oci_execute($depreciationResult);
+
+        closeOracleConnection($conn);
+
+        $output['cursorResult'] = $depreciationResult;
+        $output['Journal ID'] = $finalJournalID;
+
+        return $depreciationResult;
+
+    }
+
 ?>

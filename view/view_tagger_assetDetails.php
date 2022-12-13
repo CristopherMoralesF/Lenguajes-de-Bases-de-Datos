@@ -104,10 +104,12 @@
                                 </div>
 
                                 <div class="col-6">
-                                    <h5 class="text-muted"><i class="fa-solid fa-arrow-trend-down"></i> Depreciated Periods
+                                    <h5 class="text-muted"><i class="fa-solid fa-arrow-trend-down"></i> Depreciated
+                                        Periods
                                     </h5>
                                     <div class="alert alert-info alert-size" role="alert">
-                                        <p id="txtDepreciatedPeriods" name="txtDepreciatedPeriods">{Depreciated Periods}</p>
+                                        <p id="txtDepreciatedPeriods" name="txtDepreciatedPeriods">{Depreciated Periods}
+                                        </p>
                                     </div>
                                 </div>
 
@@ -136,7 +138,8 @@
                             <div class="row lineSeparator">
 
                                 <div class="col-6">
-                                    <h5 class="text-muted"><i class="fa-solid fa-house-circle-exclamation"></i> Assset Class
+                                    <h5 class="text-muted"><i class="fa-solid fa-house-circle-exclamation"></i> Assset
+                                        Class
                                     </h5>
                                     <div class="alert alert-info alert-size" role="alert">
                                         <p id="txtAsssetClass" name="txtAsssetClass">{Assset Class}</p>
@@ -153,45 +156,50 @@
 
                             </div>
 
-                     
-                        <div class="container separator">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h5 class="text-muted"><i class="fa-solid fa-check"></i> Asset Validations</h5>
-                                    <table class="table ">
-                                        <thead class="text-center thead-light">
-                                            <th>Validation Name</th>
-                                            <th>Validation Value</th>
-                                            <th>Actions</th>
-                                        </thead>
-                                        <tbody id="tableAssetValidationsResume" name="tableAssetValidationsResume">
-                                        </tbody>
-                                    </table>
+
+                            <div class="container separator">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="text-muted"><i class="fa-solid fa-check"></i> Asset Validations</h5>
+                                        <table class="table ">
+                                            <thead class="text-center thead-light">
+                                                <th>ID</th>
+                                                <th>Validation Name</th>
+                                                <th>Validation Value</th>
+                                                <th>Actions</th>
+                                            </thead>
+                                            <tbody id="tableAssetValidationsResume" name="tableAssetValidationsResume">
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
 
+
+
                     </div>
-
-
-
                 </div>
-            </div>
 
-            <!-- External vendor JS codes -->
-            <script src="../vendor/jquery/jquery.min.js"></script>
-            <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-            <script src="../vendor/chartJS/charts.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous">
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+                <!-- External vendor JS codes -->
+                <script src="../vendor/jquery/jquery.min.js"></script>
+                <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="../vendor/chartJS/charts.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    crossorigin="anonymous">
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+                    crossorigin="anonymous">
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 
-            <!-- Custom JS codes -->
-            <script src="../custom components/js/side-bar.js"></script>
-            <script src="../custom components/js/js_tagger_assetDetails.js"></script>
+                <script src="../vendor/sweetAlert/sweetAlert.js"></script>
+
+                <!-- Custom JS codes -->
+                <script src="../custom components/js/side-bar.js"></script>
+                <script src="../custom components/js/custom sweetAlerts.js"></script>
+                <script src="../custom components/js/js_tagger_assetDetails.js"></script>
 
 </body>
 

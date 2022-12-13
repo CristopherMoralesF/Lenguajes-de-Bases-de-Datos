@@ -19,12 +19,13 @@ function journalsReportResume() {
         }, success: function (data) {
 
             let outputList = $.parseJSON(data);
+            totalAmmount = outputList['TOTAL_ASIENTO'].replace(',','.')
 
             document.getElementById('txtJournalID').innerHTML = 'Journal ID: ' + outputList['ID_ASIENTO'];
             document.getElementById('txtCreationDate').innerHTML = outputList['FECHA'];
             document.getElementById('txtJournalDescription').innerHTML = outputList['DESCRIPCION'];
             document.getElementById('txtClassDescription').innerHTML = outputList['DESCRIPCION_CLASE'];
-            document.getElementById('textTotalAmount').innerHTML = new Intl.NumberFormat('en-US').format(outputList['TOTAL_ASIENTO']);
+            document.getElementById('textTotalAmount').innerHTML = new Intl.NumberFormat('es-ES').format(totalAmmount);
 
         }, error: function (data) {
             alert("Error calling the data, review your connection")
@@ -59,9 +60,9 @@ function journalBodyDetail() {
                 tableLines += '<td>' + journalBodyLines[i]['ID_ASIENTO_LINEA'] + '</td>'
                 tableLines += '<td>' + journalBodyLines[i]['ID_CUENTA_CONTABLE'] + '</td>'
                 tableLines += '<td class = "text-left">' + journalBodyLines[i]['DESCRIPCION_LINEA'] + '</td>'
-                tableLines += '<td>' + new Intl.NumberFormat('en-US').format(journalBodyLines[i]['DEBITO']) + '</td>'
-                tableLines += '<td>' + new Intl.NumberFormat('en-US').format(journalBodyLines[i]['CREDITO']) + '</td>'
-                tableLines += '<td>' + new Intl.NumberFormat('en-US').format(journalBodyLines[i]['BALANCE']) + '</td>'
+                tableLines += '<td>' + new Intl.NumberFormat('es-ES').format(journalBodyLines[i]['DEBITO'].replace(',','.')) + '</td>'
+                tableLines += '<td>' + new Intl.NumberFormat('es-ES').format(journalBodyLines[i]['CREDITO'].replace(',','.')) + '</td>'
+                tableLines += '<td>' + new Intl.NumberFormat('es-ES').format(journalBodyLines[i]['BALANCE'].replace(',','.')) + '</td>'
                 tableLines += '</tr>'
             }
 

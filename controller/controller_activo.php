@@ -111,6 +111,7 @@
 
         while($validation = oci_fetch_array($validationList,OCI_ASSOC+OCI_RETURN_NULLS)) {
 
+            $outputList[$i]['ID_TIPO_VALIDACION'] = $validation["ID_TIPO_VALIDACION"];
             $outputList[$i]['DESCRIPCION_VALIDACION'] = $validation["DESCRIPCION_VALIDACION"];
             $outputList[$i]['VALOR'] = $validation["VALOR"];
             $i++;

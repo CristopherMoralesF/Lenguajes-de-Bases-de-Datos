@@ -12,15 +12,17 @@ function journalsReportResume() {
 
             let outputList = $.parseJSON(data);
             let tableRow = '';
-
+            
             for (var i = 0; i < outputList.length; i++) {
+
+                totalAmmount = outputList[i]['TOTAL_ASIENTO'].replace(',','.')
 
                 tableRow += '<tr>'
                 tableRow += '<td>' + outputList[i]['ID_ASIENTO'] + '</td>'
                 tableRow += '<td>' + outputList[i]['FECHA'] + '</td>'
                 tableRow += '<td class = "text-left">' + outputList[i]['DESCRIPCION'] + '</td>'
                 tableRow += '<td class = "text-left">' + outputList[i]['DESCRIPCION_CLASE'] + '</td>'
-                tableRow += '<td>' + new Intl.NumberFormat('en-US').format(outputList[i]['TOTAL_ASIENTO']) + '</td>'
+                tableRow += '<td>' + new Intl.NumberFormat("es-ES").format(totalAmmount) + '</td>'
                 tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_accounting_journalsReport_journalDetails.php?journalID=' + outputList[i]['ID_ASIENTO'] + '"><i class="far fa-eye" style = "color: white;"></i></a></td>'
                 tableRow += '</tr>'
 
