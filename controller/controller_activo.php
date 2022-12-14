@@ -122,4 +122,35 @@
 
     }
 
+    //POST to run the depreciation for a selected class. 
+    if(isset($_POST['runDepreciation'])){
+
+        $idClass = $_POST['idClass'];
+        $journalDescription = $_POST['journalDescription'];
+
+        $runDepreciation = modelRunDepreciation($idClass,$journalDescription);
+
+        $outputList['JournalID'] = $runDepreciation['Journal ID'];
+        $i = 0;
+
+        while($resume = oci_fetch_array($runDepreciation['cursorResult'],OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+            $outputList['Depreciation Resume'][$i]['DESCRIPCION_ACTIVO'] = $resume["DESCRIPCION_ACTIVO"];
+            $outputList['Depreciation Resume'][$i]['VALOR_ADQUISICION'] = $resume["VALOR_ADQUISICION"];
+            $outputList['Depreciation Resume'][$i]['FECHA_ADQUISICION'] = $resume["FECHA_ADQUISICION"];
+            $outputList['Depreciation Resume'][$i]['PERIODOS_DEPRECIADOS'] = $resume["PERIODOS_DEPRECIADOS"];
+            $outputList['Depreciation Resume'][$i]['DESCRIPCION_CLASE'] = $resume["DESCRIPCION_CLASE"];
+            $outputList['Depreciation Resume'][$i]['VIDA_UTIL'] = $resume["VIDA_UTIL"];
+            $outputList['Depreciation Resume'][$i]['ID_CLASE'] = $resume["ID_CLASE"];
+            $outputList['Depreciation Resume'][$i]['DEPRECIACION_MENSUAL'] = $resume["DEPRECIACION_MENSUAL"];
+            $outputList['Depreciation Resume'][$i]['DEPRECIACION_ACUMULADA'] = $resume["DEPRECIACION_ACUMULADA"];
+            $i++;
+         
+         }
+
+         echo(json_encode($outputList));
+
+    
+    }
+
 ?>

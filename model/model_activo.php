@@ -160,7 +160,7 @@
         $output['cursorResult'] = $depreciationResult;
         $output['Journal ID'] = $finalJournalID;
 
-        return $depreciationResult;
+        return $output;
 
     }
 

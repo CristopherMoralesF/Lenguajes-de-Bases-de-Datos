@@ -68,8 +68,9 @@
                             </select>
 
                             <div class="justify-content-center align-items-center">
-                                <button class='btn btn-primary ' style='margin-top: 25px;' onclick='submitLine()'><i
-                                        class="fa-regular fa-paper-plane"></i> Execute Depreciation</button>
+                                <button class='btn btn-primary ' style='margin-top: 25px;'
+                                    onclick='runDepreciation()'><i class="fa-regular fa-paper-plane"></i> Execute
+                                    Depreciation</button>
                             </div>
 
                         </div>
@@ -77,22 +78,30 @@
                     </div>
                 </div>
 
-                <div class="container" style="display:none">
+                <div class="container" id="depreciationResume" name="depreciationResume"
+                    style="display:none; padding-top:25px;">
                     <div class="row">
 
                         <div class="col-12">
 
                             <table>
-                                <td>
-                                    <button class="btn btn-outline-primary"
-                                        onclick="exportJournalsExcel('journalsResume','journals-resume')"><i
-                                            class="fa-regular fa-file-excel"></i> Export Excel</button>
-                                </td>
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-outline-primary"
+                                            onclick="exportJournalsExcel('journalsResume','journals-resume')"><i
+                                                class="fa-regular fa-file-excel"></i> Export Excel</button>
+                                    </td>
+                                </tr>
                             </table>
 
 
                         </div>
-                        <br><br>
+                        <div class="col-12" style="padding-top:10px">
+                            <div class="alert alert-success" role="alert">
+                                <p id="journalID" name="journalID"></p>
+                            </div>
+                        </div>
+                        <br>
                         <div class="col-12">
 
                             <table class="table table-striped" id='journalsResume' name='journalsResume'>
@@ -103,10 +112,11 @@
                                     <th>Depreciated Periods</th>
                                     <th>Class Description</th>
                                     <th>Useful Life</th>
+                                    <th>Class ID</th>
                                     <th>Montly Depreciation</th>
                                     <th>Accumulated Depreciation</th>
                                 </thead>
-                                <tbody id="tableJournalResume" name="tableJournalResume">
+                                <tbody id="tableDepreciationResume" name="tableDepreciationResume">
                                 </tbody>
                             </table>
 
@@ -129,8 +139,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 
+    <script src="../vendor/sweetAlert/sweetAlert.js"></script>
+
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
+    <script src="../custom components/js/custom sweetAlerts.js"></script>
     <script src="../custom components/js/js_accounting_depreciation.js"></script>
 
 </body>

@@ -48,11 +48,15 @@ function accountingEquationResume() {
             //Get the results from the data base
             let indicators = $.parseJSON(data);
 
+            totalAssets = parseFloat(indicators['Activos']) - parseFloat(indicators['Complementaria Activo']);
+            totalCapital = parseFloat(indicators['Capital']) - parseFloat(indicators['Gastos']);
+            totalPasivos = parseFloat(indicators['Pasivos'])
+
 
             //Assign the values to the correct position. 
-            document.getElementById('txtTotalAssets').innerHTML = new Intl.NumberFormat('en-US').format(indicators['Activos'])
-            document.getElementById('txtLiabilities').innerHTML = new Intl.NumberFormat('en-US').format(indicators['Pasivos'])
-            document.getElementById('TotalCapital').innerHTML = new Intl.NumberFormat('en-US').format(indicators['Capital'])
+            document.getElementById('txtTotalAssets').innerHTML = new Intl.NumberFormat('es-ES').format(totalAssets)
+            document.getElementById('txtLiabilities').innerHTML = new Intl.NumberFormat('es-ES').format(totalPasivos)
+            document.getElementById('TotalCapital').innerHTML = new Intl.NumberFormat('es-ES').format(totalCapital)
 
         }, error: function (data) {
             alert("Error calling the data, review your connection")
