@@ -82,10 +82,12 @@
 
                             <table>
                                 <td>
+                                    <!--
                                     <form action="view_accounting_journalsReport_addJournal.php">
                                         <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i> Add
                                             Journal</button>
                                     </form>
+                                    -->
                                 </td>
                                 <td>
                                     <button class="btn btn-outline-primary"

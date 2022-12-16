@@ -153,4 +153,30 @@
     
     }
 
+    #Create a JSON reply to Frond End to get the asset subledger resume
+    if(isset($_GET['getAssetSubledger'])){
+
+        #load list of assets 
+        $assets = modelSubledgerAssetsResume();
+        $i = 0;
+
+        #Create a list with the items
+        while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+           $outputList[$i]['DESCRIPCION_ACTIVO'] = $asset["DESCRIPCION_ACTIVO"];
+           $outputList[$i]['DESCRIPCION_CLASE'] = $asset["DESCRIPCION_CLASE"];
+           $outputList[$i]['FECHA_ADQUISICION'] = $asset["FECHA_ADQUISICION"];
+           $outputList[$i]['VALOR_ADQUISICION'] = $asset["VALOR_ADQUISICION"];
+           $outputList[$i]['VIDA_UTIL'] = $asset["VIDA_UTIL"];
+           $outputList[$i]['PERIODOS_DEPRECIADOS'] = $asset["PERIODOS_DEPRECIADOS"];
+           $outputList[$i]['DEPRECIACION_MENSUAL'] = $asset["DEPRECIACION_MENSUAL"];
+           $outputList[$i]['DEPRECIACION_ACUMULADA'] = $asset["DEPRECIACION_ACUMULADA"];
+           $i++;
+        
+        }
+
+        //Convert the list to json and return it to the JS file
+        echo (json_encode($outputList));
+    }
+
 ?>

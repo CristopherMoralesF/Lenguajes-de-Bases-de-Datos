@@ -164,4 +164,14 @@
 
     }
 
+    //Create a function to load the asset subledger resume
+    function modelSubledgerAssetsResume(){
+
+        $instance = openOracleConnection();
+        $sqlQuery = oci_parse($instance,'SELECT * FROM DEPRECIATION_SUBLEDGER');
+        oci_execute($sqlQuery);
+
+        return $sqlQuery;
+    }
+
 ?>

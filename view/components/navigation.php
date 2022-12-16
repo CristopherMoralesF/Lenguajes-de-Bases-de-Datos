@@ -110,6 +110,10 @@ function addAccountantFunctionalities($role){
         <a class="nav-link" href="view_accounting_reconciliation.php">
             <div class="sb-nav-link-icon"><i class="fas fa-clipboard"></i></div>
             Reconciliation
+        </a>
+        <a class="nav-link" href="view_accounting_assetsSubledger.php">
+            <div class="sb-nav-link-icon"><i class="fa-solid fa-car"></i></i></div>
+            Assets Subledger
         </a>';
     } else {
         return '';

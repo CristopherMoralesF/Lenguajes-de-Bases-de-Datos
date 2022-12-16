@@ -79,5 +79,32 @@
 
     }
 
+    #Create a function to create the JE Header
+    //Create a new validation
+    function modelCreateManualJEHeader($journalDescription){
+
+        $conn = openOracleConnection();
+
+        //Create the SQL Query
+        $sqlQuery = "BEGIN
+                        CREATE_JOURNAL_HEADER(:IN_DESCRIPCION,:OUT_ID_ASIENTO);
+                    END;";
+
+        //Execute the SQL Query
+        $stmt = oci_parse($conn,$sqlQuery);
+
+        //Create variables values
+        oci_bind_by_name($stmt,':IN_DESCRIPCION',$journalDescription,32);
+        oci_bind_by_name($stmt,':OUT_ID_ASIENTO',$response,32);
+
+        //Execute the stmt
+        oci_execute($stmt);
+
+        closeOracleConnection($conn);
+
+        return $response;
+
+    }
+
 
 ?>

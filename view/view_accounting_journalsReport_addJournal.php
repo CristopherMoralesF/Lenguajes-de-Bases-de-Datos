@@ -103,7 +103,7 @@ input:focus {
                                     data-target=".bd-example-modal-lg"><i class="fa-solid fa-plus"></i> Add
                                     Line</button>
 
-                                <button type="button" class="btn btn-primary" id = "saveJournal" name = "saveJournal" style = 'display: none'><i class="far fa-save"></i> Guardar
+                                <button type="button" class="btn btn-primary" id = "saveJournal" name = "saveJournal" style = 'display: none' onclick = "createJournal()"><i class="far fa-save"></i> Guardar
                                     Asiento</button>
 
                                 <p id="journalValidation" class='text-danger' style='padding: 10px'><i
@@ -177,8 +177,11 @@ input:focus {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 
+    <script src="../vendor/sweetAlert/sweetAlert.js"></script>
+
     <!-- Custom JS codes -->
     <script src="../custom components/js/side-bar.js"></script>
+    <script src="../custom components/js/custom sweetAlerts.js"></script>
     <script src="../custom components/js/js_accounting_journalReport_addJournal.js"></script>
 
 </body>
