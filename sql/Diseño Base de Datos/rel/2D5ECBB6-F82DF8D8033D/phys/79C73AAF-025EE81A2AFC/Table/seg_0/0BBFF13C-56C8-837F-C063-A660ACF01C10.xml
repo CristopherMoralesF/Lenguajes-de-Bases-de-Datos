@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EDIFICIO" directorySegmentName="seg_0" id="0BBFF13C-56C8-837F-C063-A660ACF01C10">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0A459763-AECC-DEB0-D710-EAABFE44FDCB</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_EDIFICIO" id="75FC11D5-4BAF-95A7-CC97-DE20A8BF1FD4">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPCION_EDIFICIO" id="C1F3A953-046F-8DE8-4FF7-5FB418A6B3F5">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EDIFICIO_PK" id="1641A632-EEB6-0FCF-54B1-0DC9B1EB98C0">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<segment>53A8AE71-671F-C387-A435-0BE63F6A0972</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<indexSegment>53A8AE71-671F-C387-A435-0BE63F6A0972</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

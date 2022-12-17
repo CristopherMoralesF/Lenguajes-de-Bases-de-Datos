@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CATEGORIA_CUENTA" directorySegmentName="seg_0" id="8D85ED77-F47B-7762-34D7-3C68482EF02F">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:13 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0A459763-AECC-DEB0-D710-EAABFE44FDCB</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DESCRIPCION_CATEGORIA" id="A677AEB9-2014-A407-385A-6EFE11AB5F4D">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:13 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CATEGORIA" id="CB276971-FFD6-2FBB-2728-085F0C179E8B">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:13 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CATEGORIA_CUENTA_PK" id="8A73634F-5C51-C9F0-92DF-D82044F5DBC7">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:13 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<segment>53A8AE71-671F-C387-A435-0BE63F6A0972</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<indexSegment>53A8AE71-671F-C387-A435-0BE63F6A0972</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

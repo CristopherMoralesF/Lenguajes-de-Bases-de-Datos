@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="VALIDACION" directorySegmentName="seg_0" id="9EF85852-13A8-7B63-9553-ABCF0A74D6C2">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0A459763-AECC-DEB0-D710-EAABFE44FDCB</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_VALIDACION" id="13DABD15-B65F-5C50-AC0B-8659B6C2F3D5">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_TIPO_VALIDACION" id="4FC8D086-18ED-30F0-062B-13E048F08003">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="VALOR" id="80BCB267-561B-1105-043F-D87DC059C769">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_ACTIVO" id="F99801D6-B510-34F5-AD66-5FABA247A934">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ID_ACTIVO_VALIDACION" id="2D6B1E96-C239-C7F3-C7C0-E9C2A5F2EBEB">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ID_TIPO_VALIDACION" id="BCF6BB12-5214-6980-B82D-CD332DE47991">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="VALIDACION_PK" id="3FEDC757-85A9-B3BD-C623-3F75C523FB75">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<segment>53A8AE71-671F-C387-A435-0BE63F6A0972</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<indexSegment>53A8AE71-671F-C387-A435-0BE63F6A0972</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

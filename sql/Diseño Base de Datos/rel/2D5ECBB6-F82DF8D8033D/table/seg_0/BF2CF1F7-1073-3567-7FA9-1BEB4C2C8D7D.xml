@@ -1,0 +1,226 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF2CF1F7-1073-3567-7FA9-1BEB4C2C8D7D" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ACTIVO">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>ACTIVO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ACTIVO" id="79066734-8593-FFE3-E4CF-FDB575A48476">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>ID_ACTIVO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_CLASE" id="0278BC7B-273C-FF7E-579E-1247384E182F">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>ID_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9DD94975-D58C-1648-E26E-8144E4535534" referredColumn="C8AC6556-9D24-02EB-81E0-76B685163D94"/>
+</associations>
+</Column>
+<Column name="ID_UBICACION" id="CA9F070B-A755-48AD-FDA2-9DAD196338F6">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>ID_UBICACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D0E86DD-FA33-8E2F-B0A0-EDBA03C66B7C" referredColumn="82148917-7463-83A1-FDDA-89720D4D8A00"/>
+</associations>
+</Column>
+<Column name="ID_OWNER" id="5F6149CE-67CD-5D6E-F089-CE358E4D3A23">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>ID_OWNER</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D4866AA-89F7-A46B-4BFB-285DE8D0F91E" referredColumn="1E3D8674-158B-0546-FDF4-5BBD39694D02"/>
+</associations>
+</Column>
+<Column name="ID_ESTADO" id="B93A234F-FE46-998B-4A3F-34D6B947DB54">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>ID_ESTADO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08A87FD1-6B92-38DF-3149-A691B8859751" referredColumn="E17EFDED-B59D-2B9F-0EDB-B947246FB214"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_ACTIVO" id="5C724DC8-8947-38FE-F0C9-80564E91000E">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>DESCRIPCION_ACTIVO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_ADQUISICION" id="49520848-7169-B69F-B2F1-3DFB8D1D783D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>VALOR_ADQUISICION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_ADQUISICION" id="5D6B1582-FA53-3C54-03DD-DA0A2D0D972D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>FECHA_ADQUISICION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PERIODOS_DEPRECIADOS" id="46DDC345-4BB8-B091-D7FE-C20644A88217">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ACTIVO</sourceObjSchema>
+<sourceObjName>PERIODOS_DEPRECIADOS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D96660EF-8492-C5E7-5FCC-9999F76AE50B" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ACTIVO_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007867</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79066734-8593-FFE3-E4CF-FDB575A48476"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="52488F97-8B32-5A10-73C3-E31F9E37794B" name="FK_ID_CLASE">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0278BC7B-273C-FF7E-579E-1247384E182F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8A80ECD-11D8-904B-D1DA-FB5363BE1ABA" name="FK_ID_ESTADO">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B93A234F-FE46-998B-4A3F-34D6B947DB54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5F26A9C4-F069-14A0-6FDC-6E603ED0E30C" name="FK_ID_OWNER">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F6149CE-67CD-5D6E-F089-CE358E4D3A23"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="808E7E03-50D4-96B6-9A7B-D575BAB6833B" name="FK_ID_UBICACION">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA9F070B-A755-48AD-FDA2-9DAD196338F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

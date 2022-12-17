@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D47DF71-87D0-F405-B54C-E103348C6857" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ASIENTO">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>ASIENTO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ASIENTO" id="EE77012B-4951-4750-02AC-A500900566A8">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO</sourceObjSchema>
+<sourceObjName>ID_ASIENTO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_CLASE" id="1D88BB91-5D80-3E2A-840B-B675FEAABC49">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO</sourceObjSchema>
+<sourceObjName>ID_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="890EFAFB-F02A-D24F-488F-243CB3566245" referredColumn="C8AC6556-9D24-02EB-81E0-76B685163D94"/>
+</associations>
+</Column>
+<Column name="FECHA" id="C4B7C6EC-7628-6B27-1663-6C22D9ED0EA2">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO</sourceObjSchema>
+<sourceObjName>FECHA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCIÓN" id="093196B1-B72A-9869-9921-81B01187997D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO</sourceObjSchema>
+<sourceObjName>DESCRIPCIÓN</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D17CD529-2949-4727-EE51-ACDB07D26578" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ASIENTO_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007875</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE77012B-4951-4750-02AC-A500900566A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FC87482B-15AA-F831-A3C4-9EDECACEA1F2" name="FK_ID_ACTIVO">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:54 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D88BB91-5D80-3E2A-840B-B675FEAABC49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

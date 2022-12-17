@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USUARIO" directorySegmentName="seg_0" id="2A24D384-184D-0DAC-3F54-3513AF162D63">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0A459763-AECC-DEB0-D710-EAABFE44FDCB</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_USUARIO" id="1E3D8674-158B-0546-FDF4-5BBD39694D02">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="CORREO" id="36CF8138-5C54-2E77-200A-81E715290113">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE" id="5ACB80CD-6D3D-6E6F-46BD-988E56DEC63A">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_ROLE" id="A04278D2-9070-7C09-48BD-EEC7DBD5B9C1">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_PASSWORD" id="B0E54B4E-42CB-671F-4C10-2D2B3284F204">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ID_ROLE" id="43C9A3BC-EC5C-86DE-EBBA-BF7754054823">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USUARIO_PK" id="75F0727F-466B-86B6-AAD6-24D382110DAC">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:53 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<segment>53A8AE71-671F-C387-A435-0BE63F6A0972</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<indexSegment>53A8AE71-671F-C387-A435-0BE63F6A0972</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

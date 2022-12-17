@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1CD873C8-3C33-BA5F-98BB-DE5D965C156E" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="TIPO_VALIDACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>TIPO_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_VALIDACION" id="1ADA7051-1054-1A46-4A70-36527165067D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>TIPO_VALIDACION</sourceObjSchema>
+<sourceObjName>ID_TIPO_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_CLASE" id="0E631E74-98C8-4EE3-DD0A-7D08B943806C">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>TIPO_VALIDACION</sourceObjSchema>
+<sourceObjName>ID_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3BE4283-F5D5-BF4E-3202-FD4C9F59E7A0" referredColumn="C8AC6556-9D24-02EB-81E0-76B685163D94"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_VALIDACION" id="5733BF35-654E-BB44-120E-F1AD42403FC9">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>TIPO_VALIDACION</sourceObjSchema>
+<sourceObjName>DESCRIPCION_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 BYTE</dataTypeSize>
+<ownDataTypeParameters>60 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A344BF43-6C76-16F0-3C30-6D7ECD3C70FE" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="TIPO_VALIDACION_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007889</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1ADA7051-1054-1A46-4A70-36527165067D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E3E4EE0-76DC-A719-B3F8-7ED22DF164F6" name="FK_ID_CLASE_VALIDACION">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E631E74-98C8-4EE3-DD0A-7D08B943806C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

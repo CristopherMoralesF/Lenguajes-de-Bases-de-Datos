@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9EF85852-13A8-7B63-9553-ABCF0A74D6C2" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="VALIDACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VALIDACION" id="13DABD15-B65F-5C50-AC0B-8659B6C2F3D5">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>VALIDACION</sourceObjSchema>
+<sourceObjName>ID_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_TIPO_VALIDACION" id="4FC8D086-18ED-30F0-062B-13E048F08003">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>VALIDACION</sourceObjSchema>
+<sourceObjName>ID_TIPO_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7294450-9675-8B25-EAD9-0BFE08E5C686" referredColumn="1ADA7051-1054-1A46-4A70-36527165067D"/>
+</associations>
+</Column>
+<Column name="ID_ACTIVO" id="F99801D6-B510-34F5-AD66-5FABA247A934">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>VALIDACION</sourceObjSchema>
+<sourceObjName>ID_ACTIVO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="71CA56A4-DFA1-5CB3-6569-F0166A5CBAC9" referredColumn="79066734-8593-FFE3-E4CF-FDB575A48476"/>
+</associations>
+</Column>
+<Column name="VALOR" id="80BCB267-561B-1105-043F-D87DC059C769">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>VALIDACION</sourceObjSchema>
+<sourceObjName>VALOR</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3FEDC757-85A9-B3BD-C623-3F75C523FB75" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="VALIDACION_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007894</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13DABD15-B65F-5C50-AC0B-8659B6C2F3D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D6B1E96-C239-C7F3-C7C0-E9C2A5F2EBEB" name="FK_ID_ACTIVO_VALIDACION">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F99801D6-B510-34F5-AD66-5FABA247A934"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BCF6BB12-5214-6980-B82D-CD332DE47991" name="FK_ID_TIPO_VALIDACION">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FC8D086-18ED-30F0-062B-13E048F08003"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

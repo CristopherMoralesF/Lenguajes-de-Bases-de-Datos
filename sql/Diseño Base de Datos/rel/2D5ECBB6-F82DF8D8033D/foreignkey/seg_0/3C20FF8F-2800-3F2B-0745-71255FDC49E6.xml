@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3C20FF8F-2800-3F2B-0745-71255FDC49E6" containerWithKeyObject="6372F50F-426A-01A3-F8EB-684633A362AD" localFKIndex="4A8BB571-DBEB-F4C1-E941-310143E34D81" name="FK_ID_ASIENTO">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_ID_ASIENTO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:00 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.ASIENTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8D47DF71-87D0-F405-B54C-E103348C6857</referredTableID>
+<keyObject>D17CD529-2949-4727-EE51-ACDB07D26578</keyObject>
+<referredKeyID>D17CD529-2949-4727-EE51-ACDB07D26578</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ASIENTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

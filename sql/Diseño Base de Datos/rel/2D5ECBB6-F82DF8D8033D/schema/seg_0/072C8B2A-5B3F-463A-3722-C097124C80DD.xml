@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SchemaObject class="oracle.dbtools.crest.model.design.relational.SchemaObject" name="CRIS" directorySegmentName="seg_0" id="072C8B2A-5B3F-463A-3722-C097124C80DD">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</SchemaObject>

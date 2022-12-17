@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2D0E86DD-FA33-8E2F-B0A0-EDBA03C66B7C" containerWithKeyObject="BF2CF1F7-1073-3567-7FA9-1BEB4C2C8D7D" localFKIndex="808E7E03-50D4-96B6-9A7B-D575BAB6833B" name="FK_ID_UBICACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_ID_UBICACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:48 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.UBICACION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2238D07E-90AB-63A4-A17C-61BB907083B2</referredTableID>
+<keyObject>9A7A2A25-E2A9-6B51-BB03-AD72EC037FD1</keyObject>
+<referredKeyID>9A7A2A25-E2A9-6B51-BB03-AD72EC037FD1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_UBICACIÓN</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

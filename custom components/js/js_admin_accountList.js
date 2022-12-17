@@ -22,7 +22,7 @@ function getAccountBalanaceResume() {
                 tableRow += '<td>' + new Intl.NumberFormat('en-US').format(outputList[i]['TOTAL_DEBITOS'].replace(',','.')) + '</td>'
                 tableRow += '<td>' + new Intl.NumberFormat('en-US').format(outputList[i]['TOTAL_CREDITOS'].replace(',','.')) + '</td>'
                 tableRow += '<td>' + new Intl.NumberFormat('en-US').format(outputList[i]['BALANCE'].replace(',','.')) + '</td>'
-                tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_accounting_journalsReport_journalDetails.php?journalID=' + outputList[i]['ID_CUENTA'] + '"><i class="fa-solid fa-pencil" style = "color: white;"></i></a></td>'
+                //tableRow += '<td><a class = "btn btn-secondary" href = "../view/view_accounting_journalsReport_journalDetails.php?journalID=' + outputList[i]['ID_CUENTA'] + '"><i class="fa-solid fa-pencil" style = "color: white;"></i></a></td>'
                 tableRow += '</tr>'
 
             }

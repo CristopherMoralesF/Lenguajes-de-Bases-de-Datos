@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="17B9586E-B3CD-6DA3-87E6-F7C5D8DC9263" containerWithKeyObject="DB8A5981-36EC-B826-61AD-A81F987FCDA1" localFKIndex="4EEAE20C-0383-BDAE-DB7F-1F2111225C03" name="FK_ID_CATEGORIA">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_ID_CATEGORIA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.CATEGORIA_CUENTA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8D85ED77-F47B-7762-34D7-3C68482EF02F</referredTableID>
+<keyObject>8A73634F-5C51-C9F0-92DF-D82044F5DBC7</keyObject>
+<referredKeyID>8A73634F-5C51-C9F0-92DF-D82044F5DBC7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CATEGORIA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

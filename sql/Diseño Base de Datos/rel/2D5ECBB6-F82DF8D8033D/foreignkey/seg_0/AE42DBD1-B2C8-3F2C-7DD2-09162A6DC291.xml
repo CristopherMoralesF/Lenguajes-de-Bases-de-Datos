@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="AE42DBD1-B2C8-3F2C-7DD2-09162A6DC291" containerWithKeyObject="967FCAA4-9365-E40B-D8F2-BC6482053E52" localFKIndex="DE5576F7-7761-A297-E02A-180380A31CA2" name="FK_CUENTA_CLASECUENTA">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_CUENTA_CLASECUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.CUENTA_CONTABLE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DB8A5981-36EC-B826-61AD-A81F987FCDA1</referredTableID>
+<keyObject>056FED95-0A99-27E0-D0D3-A6DA68E75CDD</keyObject>
+<referredKeyID>056FED95-0A99-27E0-D0D3-A6DA68E75CDD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CUENTA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

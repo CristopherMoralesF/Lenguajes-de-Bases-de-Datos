@@ -1,0 +1,150 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6372F50F-426A-01A3-F8EB-684633A362AD" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ASIENTO_LINEA">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>ASIENTO_LINEA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ASIENTO_LINEA" id="C8833ED4-94D3-5ADD-E360-9BCAD423E612">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>ID_ASIENTO_LINEA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_ASIENTO" id="4E0B1FE3-668C-83F3-E883-52121A364AC9">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>ID_ASIENTO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3C20FF8F-2800-3F2B-0745-71255FDC49E6" referredColumn="EE77012B-4951-4750-02AC-A500900566A8"/>
+</associations>
+</Column>
+<Column name="ID_CUENTA_CONTABLE" id="27142BF4-0B59-A8D9-35E3-0127258AA768">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>ID_CUENTA_CONTABLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C26BC67-D245-9792-36C3-4D43AE59D16D" referredColumn="F192FAEE-5756-D39F-38D2-9E19B0E7E22C"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_LINEA" id="5BB490D5-34CA-2208-23B8-B639AED0ACD6">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>DESCRIPCION_LINEA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255 BYTE</dataTypeSize>
+<ownDataTypeParameters>255 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEBITO" id="38578960-1784-68DA-0133-9AE071A13FEC">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>DEBITO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,20,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREDITO" id="A8F48201-5911-1972-8320-E98B15359701">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ASIENTO_LINEA</sourceObjSchema>
+<sourceObjName>CREDITO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:59 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,20,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4CF5463D-A807-1B85-C07F-C9CA0D86A54B" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ASIENTO_LINEA_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007883</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:00 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8833ED4-94D3-5ADD-E360-9BCAD423E612"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A8BB571-DBEB-F4C1-E941-310143E34D81" name="FK_ID_ASIENTO">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:00 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E0B1FE3-668C-83F3-E883-52121A364AC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E94F0A5-E288-0B22-B623-C7CBE7611836" name="FK_ID_CUENTA_LINEA">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:00 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27142BF4-0B59-A8D9-35E3-0127258AA768"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

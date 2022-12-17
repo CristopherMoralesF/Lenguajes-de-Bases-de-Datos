@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6E2885E4-EBAF-9078-DEBD-AAD4CC60EA40" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CLASE">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:19 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLASE" id="C8AC6556-9D24-02EB-81E0-76B685163D94">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE</sourceObjSchema>
+<sourceObjName>ID_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:19 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="DESCRIPCION_CLASE" id="8C9A4972-71DE-1CAB-46BD-2F84A7256A19">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE</sourceObjSchema>
+<sourceObjName>DESCRIPCION_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:19 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIDA_UTIL" id="96D11583-43D0-0E4C-E571-05A4A403CBF3">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE</sourceObjSchema>
+<sourceObjName>VIDA_UTIL</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:19 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F9B3DFFB-6D62-82EE-535F-53F096A3024E" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CLASE_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007850</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:19 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8AC6556-9D24-02EB-81E0-76B685163D94"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

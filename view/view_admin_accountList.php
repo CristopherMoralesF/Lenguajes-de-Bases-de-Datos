@@ -48,7 +48,9 @@
                         <th>Total Debits</th>
                         <th>Total Credits</th>
                         <th>Total Balance</th>
+                        <!--
                         <th>Actions</th>
+                        -->
                     </thead>
                     <tbody id="tblAccountBalanceResume" name = 'tblAccountBalanceResume'>
                         <!-- Information is comming with a JS function -->

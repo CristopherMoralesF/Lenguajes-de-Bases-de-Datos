@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="68EC5D13-C916-ECDC-6035-FA2298B26B8E" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="USUARIO_ROLE">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>USUARIO_ROLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:58 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ROLE" id="5E4F95F2-6313-CBCD-63C5-F5D4C38825C7">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>USUARIO_ROLE</sourceObjSchema>
+<sourceObjName>ID_ROLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:58 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOMBRE_ROLE" id="301292F9-A584-D9D2-B951-CE30A23D0E30">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>USUARIO_ROLE</sourceObjSchema>
+<sourceObjName>NOMBRE_ROLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:58 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_PERMISOS" id="AEF502BC-05CA-A0E5-4470-D4E404984A47">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>USUARIO_ROLE</sourceObjSchema>
+<sourceObjName>DESCRIPCION_PERMISOS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:58 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="634D6545-1073-8A9A-29F1-8B5CBCC94E88" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="USUARIO_ROLE_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007833</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:58 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E4F95F2-6313-CBCD-63C5-F5D4C38825C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

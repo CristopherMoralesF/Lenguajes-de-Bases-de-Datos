@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB8A5981-36EC-B826-61AD-A81F987FCDA1" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CUENTA_CONTABLE">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>CUENTA_CONTABLE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CUENTA" id="F192FAEE-5756-D39F-38D2-9E19B0E7E22C">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>ID_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_CUENTA" id="EA33D4A8-8847-B502-22CF-5FF56A6AF37C">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>DESCRIPCION_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_CATEGORIA" id="6FA7E92E-D01D-CD7E-8B7E-B3628512368B">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>ID_CATEGORIA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="17B9586E-B3CD-6DA3-87E6-F7C5D8DC9263" referredColumn="CB276971-FFD6-2FBB-2728-085F0C179E8B"/>
+</associations>
+</Column>
+<Column name="TOTAL_DEBITOS" id="D762B071-4FCE-BFF2-BFAA-7BD162608B6D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>TOTAL_DEBITOS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TOTAL_CREDITOS" id="2089E3CD-ECBF-ED44-576D-2CA5456B69D9">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>TOTAL_CREDITOS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BALANCE" id="10AEA31B-53DF-C8BE-1A1C-9C038C446EE7">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>BALANCE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>126</dataTypePrecision>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,126,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NATURALEZA" id="FB7FC396-96FA-F0FB-0E8D-A2ECC012E503">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CUENTA_CONTABLE</sourceObjSchema>
+<sourceObjName>NATURALEZA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="056FED95-0A99-27E0-D0D3-A6DA68E75CDD" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CUENTA_CONTABLE_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007847</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F192FAEE-5756-D39F-38D2-9E19B0E7E22C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4EEAE20C-0383-BDAE-DB7F-1F2111225C03" name="FK_ID_CATEGORIA">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:28 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FA7E92E-D01D-CD7E-8B7E-B3628512368B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

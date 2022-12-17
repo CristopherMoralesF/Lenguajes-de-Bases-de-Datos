@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="CRIS" directorySegmentName="seg_0" id="9039F05B-50C8-092B-7F6E-D2C55D2BE6E1">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjName>CRIS</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:26:47 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<defTableSpace>8490760F-6361-F643-084D-C4295F68BEBB</defTableSpace>
+<privileges>UPDATE ANY CUBE, INHERIT ANY PRIVILEGES, ALTER PROFILE, DROP ANY SEQUENCE, ALTER PUBLIC DATABASE LINK, MANAGE FILE GROUP, CREATE JOB, ALTER ANY ANALYTIC VIEW, DROP ANY SQL TRANSLATION PROFILE, MANAGE ANY FILE GROUP, UNDER ANY TABLE, ALTER ANY INDEX, UNLIMITED TABLESPACE, DROP ANY CONTEXT, DROP ANY TRIGGER</privileges>
+</UserOraclev10g>

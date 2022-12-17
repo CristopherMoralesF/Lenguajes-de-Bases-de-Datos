@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CLASE_CUENTA" directorySegmentName="seg_0" id="967FCAA4-9365-E40B-D8F2-BC6482053E52">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0A459763-AECC-DEB0-D710-EAABFE44FDCB</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_CLASE" id="23D8CCB2-D996-ED29-786E-9F8242DD684D">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CLASE_CUENTA" id="802F1D0D-DFD7-6E74-2506-B598BBB91E49">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_CATEGORIA_CUENTA" id="838250AA-449A-A8F3-08C0-330781E95F20">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_CUENTA" id="E68879A1-2BEF-9FA7-989D-E7159EE46780">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CATEGORIA_CLASECUENTA" id="2CF69339-4CD1-2CD2-D420-83CFF3B66044">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CLASE_CLASECUENTA" id="BEBD06DF-4762-0E79-C19D-5464B862F750">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CUENTA_CLASECUENTA" id="DE5576F7-7761-A297-E02A-180380A31CA2">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CLASE_CUENTA_PK" id="1EFDA158-0EF2-4BF6-ACB2-072AB2E0C61E">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<schemaObject>072C8B2A-5B3F-463A-3722-C097124C80DD</schemaObject>
+<segment>53A8AE71-671F-C387-A435-0BE63F6A0972</segment>
+<tableSpace>8490760F-6361-F643-084D-C4295F68BEBB</tableSpace>
+<indexSegment>53A8AE71-671F-C387-A435-0BE63F6A0972</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

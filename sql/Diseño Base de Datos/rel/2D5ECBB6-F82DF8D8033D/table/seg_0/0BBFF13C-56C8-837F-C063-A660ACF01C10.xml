@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0BBFF13C-56C8-837F-C063-A660ACF01C10" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="EDIFICIO">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>EDIFICIO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EDIFICIO" id="75FC11D5-4BAF-95A7-CC97-DE20A8BF1FD4">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>EDIFICIO</sourceObjSchema>
+<sourceObjName>ID_EDIFICIO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_EDIFICIO" id="C1F3A953-046F-8DE8-4FF7-5FB418A6B3F5">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>EDIFICIO</sourceObjSchema>
+<sourceObjName>DESCRIPCION_EDIFICIO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1641A632-EEB6-0FCF-54B1-0DC9B1EB98C0" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="EDIFICIO_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007827</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:34 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75FC11D5-4BAF-95A7-CC97-DE20A8BF1FD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

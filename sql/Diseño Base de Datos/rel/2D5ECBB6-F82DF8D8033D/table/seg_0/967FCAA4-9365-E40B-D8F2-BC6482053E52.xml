@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="967FCAA4-9365-E40B-D8F2-BC6482053E52" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CLASE_CUENTA">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>CLASE_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLASE_CUENTA" id="802F1D0D-DFD7-6E74-2506-B598BBB91E49">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE_CUENTA</sourceObjSchema>
+<sourceObjName>ID_CLASE_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_CLASE" id="23D8CCB2-D996-ED29-786E-9F8242DD684D">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE_CUENTA</sourceObjSchema>
+<sourceObjName>ID_CLASE</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4049DC9-C286-A598-9445-293D50FF1525" referredColumn="C8AC6556-9D24-02EB-81E0-76B685163D94"/>
+</associations>
+</Column>
+<Column name="ID_CUENTA" id="E68879A1-2BEF-9FA7-989D-E7159EE46780">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE_CUENTA</sourceObjSchema>
+<sourceObjName>ID_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE42DBD1-B2C8-3F2C-7DD2-09162A6DC291" referredColumn="F192FAEE-5756-D39F-38D2-9E19B0E7E22C"/>
+</associations>
+</Column>
+<Column name="ID_CATEGORIA_CUENTA" id="838250AA-449A-A8F3-08C0-330781E95F20">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CLASE_CUENTA</sourceObjSchema>
+<sourceObjName>ID_CATEGORIA_CUENTA</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6092C926-1644-04CB-A647-539962B234FC" referredColumn="CB276971-FFD6-2FBB-2728-085F0C179E8B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1EFDA158-0EF2-4BF6-ACB2-072AB2E0C61E" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="CLASE_CUENTA_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007855</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="802F1D0D-DFD7-6E74-2506-B598BBB91E49"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2CF69339-4CD1-2CD2-D420-83CFF3B66044" name="FK_CATEGORIA_CLASECUENTA">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="838250AA-449A-A8F3-08C0-330781E95F20"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEBD06DF-4762-0E79-C19D-5464B862F750" name="FK_CLASE_CLASECUENTA">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23D8CCB2-D996-ED29-786E-9F8242DD684D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE5576F7-7761-A297-E02A-180380A31CA2" name="FK_CUENTA_CLASECUENTA">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:23 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E68879A1-2BEF-9FA7-989D-E7159EE46780"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

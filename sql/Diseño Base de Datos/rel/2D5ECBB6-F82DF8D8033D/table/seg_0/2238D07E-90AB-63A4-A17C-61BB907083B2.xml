@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2238D07E-90AB-63A4-A17C-61BB907083B2" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="UBICACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>UBICACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UBICACIÓN" id="82148917-7463-83A1-FDDA-89720D4D8A00">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>UBICACION</sourceObjSchema>
+<sourceObjName>ID_UBICACIÓN</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_EDIFICIO" id="A1723F2E-DA4D-7843-43E4-2B43DA419175">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>UBICACION</sourceObjSchema>
+<sourceObjName>ID_EDIFICIO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="25B35E7C-36C2-A41D-A883-13015FC5C5F0" referredColumn="75FC11D5-4BAF-95A7-CC97-DE20A8BF1FD4"/>
+</associations>
+</Column>
+<Column name="DESCRIPCION_SECCION" id="3A8CF18B-F863-B941-A786-421024235123">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>UBICACION</sourceObjSchema>
+<sourceObjName>DESCRIPCION_SECCION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9A7A2A25-E2A9-6B51-BB03-AD72EC037FD1" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="UBICACION_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007830</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82148917-7463-83A1-FDDA-89720D4D8A00"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F2180D2-90B9-4400-AC24-8433A83B5F8E" name="FK_ID_EDIFICIO">
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:49 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A1723F2E-DA4D-7843-43E4-2B43DA419175"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

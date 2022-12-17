@@ -138,6 +138,7 @@ function addAdminFuntionalities($role){
             <nav class="sb-sidenav-menu-nested nav">
                 <a class="nav-link" href="../view/view_admin_usersList.php">Users List</a>
                 <a class="nav-link" href="../view/view_admin_usersCreateUser.php">Create User</a>
+                <a class="nav-link" href="../view/view_admin_usersUpdateUser.php">Edit User</a>
             </nav>
         </div>
 

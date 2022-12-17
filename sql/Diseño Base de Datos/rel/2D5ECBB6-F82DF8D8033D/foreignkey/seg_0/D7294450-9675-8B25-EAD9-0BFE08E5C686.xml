@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D7294450-9675-8B25-EAD9-0BFE08E5C686" containerWithKeyObject="9EF85852-13A8-7B63-9553-ABCF0A74D6C2" localFKIndex="BCF6BB12-5214-6980-B82D-CD332DE47991" name="FK_ID_TIPO_VALIDACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_ID_TIPO_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:28:02 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.TIPO_VALIDACION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1CD873C8-3C33-BA5F-98BB-DE5D965C156E</referredTableID>
+<keyObject>A344BF43-6C76-16F0-3C30-6D7ECD3C70FE</keyObject>
+<referredKeyID>A344BF43-6C76-16F0-3C30-6D7ECD3C70FE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO_VALIDACION</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

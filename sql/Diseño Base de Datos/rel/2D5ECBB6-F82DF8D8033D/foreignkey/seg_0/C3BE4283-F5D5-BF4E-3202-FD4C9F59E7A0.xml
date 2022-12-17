@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C3BE4283-F5D5-BF4E-3202-FD4C9F59E7A0" containerWithKeyObject="1CD873C8-3C33-BA5F-98BB-DE5D965C156E" localFKIndex="9E3E4EE0-76DC-A719-B3F8-7ED22DF164F6" name="FK_ID_CLASE_VALIDACION">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>FK_ID_CLASE_VALIDACION</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:44 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<referredTableLongName>CRIS.CLASE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6E2885E4-EBAF-9078-DEBD-AAD4CC60EA40</referredTableID>
+<keyObject>F9B3DFFB-6D62-82EE-535F-53F096A3024E</keyObject>
+<referredKeyID>F9B3DFFB-6D62-82EE-535F-53F096A3024E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_CLASE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

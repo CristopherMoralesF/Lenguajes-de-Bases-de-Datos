@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="800FD98D-7138-54C1-4204-48491E345038" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ESTADO">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>ESTADO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:39 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESTADO" id="E17EFDED-B59D-2B9F-0EDB-B947246FB214">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ESTADO</sourceObjSchema>
+<sourceObjName>ID_ESTADO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:39 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="DESCRIPCION_ESTADO" id="D49FA11A-58CB-8D6C-4BBD-0F5EF39FF5D5">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>ESTADO</sourceObjSchema>
+<sourceObjName>DESCRIPCION_ESTADO</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:39 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="42C3ACB6-2D53-08C5-6002-01598C0ABE14" schemaObject="072C8B2A-5B3F-463A-3722-C097124C80DD" name="ESTADO_PK">
+<sourceConnName>Curso+Base+de+datos.</sourceConnName>
+<sourceObjSchema>CRIS</sourceObjSchema>
+<sourceObjName>SYS_C007861</sourceObjName>
+<createdBy>Admin</createdBy>
+<createdTime>2022-12-16 06:27:39 UTC</createdTime>
+<ownerDesignName>Diseño Base de Datos</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E17EFDED-B59D-2B9F-0EDB-B947246FB214"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
