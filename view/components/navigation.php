@@ -99,6 +99,10 @@ function addAccountantFunctionalities($role){
 
     if($role == 'CONTADOR'){
         return '<div class="sb-sidenav-menu-heading">ACCOUNTING</div>
+        <a class="nav-link" href="view_accounting_dashboard.php">
+            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+            Accounting Dashboard
+        </a>
         <a class="nav-link" href="view_accounting_depreciation.php">
             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
             Depreciation
