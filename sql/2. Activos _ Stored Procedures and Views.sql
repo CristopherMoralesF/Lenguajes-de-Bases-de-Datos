@@ -66,6 +66,7 @@ BEGIN
     DBMS_SQL.RETURN_RESULT(OUT_KPI_RESUME);
 END;    
 
+
 --------------------- Create view with a resume of assets information --------------------- 
 CREATE OR REPLACE VIEW ASSETS_RESUME AS
     SELECT 

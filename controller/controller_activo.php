@@ -88,6 +88,8 @@
         }
 
     echo(json_encode($outputList));
+
+    }
     
 
     #Create a JSON reply to Frond End to create a table with the assets resume
@@ -120,7 +122,7 @@
     }
     
     #Create a JSON reply with the resume of the indicators
-    if(isset($_GET['AssetIndResume'])){
+    if(isset($_GET['AssetIndicators'])){
 
         #load list of indicators
         $indicators = modelAssetIndResume();
@@ -244,6 +246,5 @@
 
         //Convert the list to json and return it to the JS file
         echo (json_encode($outputList));
-    }
     }
 ?>

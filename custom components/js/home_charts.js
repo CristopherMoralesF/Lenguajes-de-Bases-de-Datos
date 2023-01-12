@@ -21,11 +21,12 @@ function dashboardFilter() {
 
 //Complete the information related to the indicators
 function modelAssetIndResume() {
+
   $.ajax({
     type: 'GET',
     url: '../controller/controller_activo.php',
     data: {
-      'AssetIndResume': 'AssetIndResume'
+      'AssetIndicators': 'AssetIndicators'
     }, success: function (data) {
 
       let indicatorsList = $.parseJSON(data);
@@ -40,6 +41,8 @@ function modelAssetIndResume() {
       alert("Error calling the data, review your connection")
     }
   })
+
+
 }
 
 //Complete the information related to the risk assessment table
@@ -106,7 +109,7 @@ function loadClassAssetResume() {
       }
 
       drawClassAssetResume(Class, Totals);
-      drawAccountingDifferences(Class,Totals)
+      drawAccountingDifferences(Class, Totals)
 
 
     }, error: function (data) {
@@ -175,11 +178,11 @@ function drawClassAssetResume(labels, Data) {
 
 }
 
-  function DistinctRecords(MYJSON, prop) {
-    return MYJSON.filter((obj, pos, arr) => { 
-      return arr.map(map0bj => map0bj[prop]).indexOf(obj[prop]) === pos;
-    })
-  }
+function DistinctRecords(MYJSON, prop) {
+  return MYJSON.filter((obj, pos, arr) => {
+    return arr.map(map0bj => map0bj[prop]).indexOf(obj[prop]) === pos;
+  })
+}
 
 function loadClassRiskAssessment() {
 
@@ -194,17 +197,17 @@ function loadClassRiskAssessment() {
       let assetList = $.parseJSON(data);
 
       //Get the unique classes from the data set. 
-      classes = DistinctRecords(assetList,"DESCRIPCION_CLASE");
+      classes = DistinctRecords(assetList, "DESCRIPCION_CLASE");
 
-      riskVariables = ['L','M','H']
+      riskVariables = ['L', 'M', 'H']
       classList = [];
       riskL = [];
       riskM = [];
       riskH = [];
       i = 0;
 
-      
-      for(let assetClass in classes){
+
+      for (let assetClass in classes) {
 
         //Complete an array with the classes names
         selectedClass = assetList[assetClass]['DESCRIPCION_CLASE']
@@ -217,23 +220,23 @@ function loadClassRiskAssessment() {
         classList[i] = selectedClass
 
         //Complete the risk assessment array
-        for(let riskVariable in riskVariables){
+        for (let riskVariable in riskVariables) {
 
           //Get the risk level
           riskLevel = riskVariables[riskVariable]
           assetListByRiskVariable = assetListByClass.filter(element => element.RISK_ASSESMENT == riskLevel);
 
           //Get the final value
-          if(assetListByRiskVariable.length > 0) {
+          if (assetListByRiskVariable.length > 0) {
             value = parseInt(assetListByRiskVariable[0]['TOTAL_ASSETS'])
           } else {
             value = 0
           }
 
           //Assing the value to the correct array
-          if(riskLevel == 'L') {
+          if (riskLevel == 'L') {
             riskL[i] = value
-          } else if (riskLevel == 'M'){
+          } else if (riskLevel == 'M') {
             riskM[i] = value
           } else {
             riskH[i] = value
@@ -244,7 +247,7 @@ function loadClassRiskAssessment() {
         i++
       }
 
-      drawClasRiskAssessment(classList,riskL,riskM,riskH)
+      drawClasRiskAssessment(classList, riskL, riskM, riskH)
 
     }, error: function (data) {
       alert("Error calling the data, review your connection")
@@ -253,7 +256,7 @@ function loadClassRiskAssessment() {
 
 }
 
-function drawClasRiskAssessment(labels, riskL,riskM,riskH) {
+function drawClasRiskAssessment(labels, riskL, riskM, riskH) {
 
   const data = {
     labels: labels,
