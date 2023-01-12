@@ -1,0 +1,48 @@
+#layoutSidenav_content {
+    background-color: rgba(211, 208, 208, 0.596);
+    width: 100%;
+    height: 100%;
+}
+.separator {
+    padding: 15px;
+}
+
+.maxWidth {
+    max-width: 83%;
+}
+
+#informativeCard {
+    background: linear-gradient(#0238ebba,#0b7edbcc)/*, url('../img/web_icon.png') no-repeat center center fixed*/;
+    background-size: cover;
+}
+
+.chartDiv{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px 0px rgba(155, 154, 154, 0.49);
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.riskH:hover{
+    color: #DC164A;
+}
+.riskM:hover{
+    color: #f0ba08;
+}
+.riskL:hover{
+    color: #1C9645;
+}

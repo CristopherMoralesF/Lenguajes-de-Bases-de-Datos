@@ -13,15 +13,84 @@
         #Create a list with the items
         while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
 
-           $outputList[$i]['Class'] = $asset["DESCRIPCION_CLASE"];
-           $outputList[$i]['Total'] = $asset["TOTAL_ACTIVOS"];
-           $i++;
+            $outputList[$i]['Class'] = $asset["DESCRIPCION_CLASE"];
+            $outputList[$i]['Total'] = $asset["TOTAL_ACTIVOS"];
+            $i++;
         
         }
 
         //Convert the list to json and return it to the JS file
         echo (json_encode($outputList));
     }
+
+    //Create function to reply to front end assets risk assessment
+    if(isset($_GET['AssetsResumeRiskTable'])){
+
+
+        $levelDetail = $_GET['levelDetail'];
+
+        //Get the list of assets from the model
+        $assets = modelAssetsResumeRiskTable();
+        $i = 0;
+
+        //The screen will return only the assets own by the user, so, we get the user if from the session variables
+        if($levelDetail == 'User') {
+            
+            session_start();     
+            $userID = $_SESSION['id_usuario'];
+            session_write_close();
+    
+            while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
+    
+                if($asset['ID_OWNER'] == $userID){
+                    $outputList[$i]['ID_ACTIVO'] = $asset['ID_ACTIVO'];
+                    $outputList[$i]['DESCRIPCION_ACTIVO'] = $asset['DESCRIPCION_ACTIVO'];
+                    $outputList[$i]['DESCRIPCION_CLASE'] = $asset['DESCRIPCION_CLASE'];
+                    $outputList[$i]['VALIDATION_PERCENTAJE'] = $asset['VALIDATION_PERCENTAJE'];
+                    $outputList[$i]['RISK_ASSESMENT'] = $asset['RISK_ASSESMENT'];
+                    $i ++;
+                }
+            }
+
+        } else {
+            
+            while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
+    
+                    $outputList[$i]['ID_ACTIVO'] = $asset['ID_ACTIVO'];
+                    $outputList[$i]['DESCRIPCION_ACTIVO'] = $asset['DESCRIPCION_ACTIVO'];
+                    $outputList[$i]['DESCRIPCION_CLASE'] = $asset['DESCRIPCION_CLASE'];
+                    $outputList[$i]['VALIDATION_PERCENTAJE'] = $asset['VALIDATION_PERCENTAJE'];
+                    $outputList[$i]['RISK_ASSESMENT'] = $asset['RISK_ASSESMENT'];
+                    $i ++;
+                
+            }
+            
+        }
+        
+
+        echo(json_encode($outputList));
+    }
+
+    //Create function to reply to front end assets risk assessment resume for bar char
+    if(isset($_GET['AssetsResumeRisk'])){
+
+        //Get the list of assets from the model
+        $assets = modelAssetsResumeRisk();
+        $i = 0;
+
+        //The screen will return only the assets own by the user, so, we get the user if from the session variables
+        while($asset = oci_fetch_array($assets,OCI_ASSOC+OCI_RETURN_NULLS)) {
+
+                $outputList[$i]['DESCRIPCION_CLASE'] = $asset['DESCRIPCION_CLASE'];
+                $outputList[$i]['RISK_ASSESMENT'] = $asset['RISK_ASSESMENT'];
+                $outputList[$i]['TOTAL_ASSETS'] = $asset['TOTAL_ASSETS'];
+                $i ++;
+        }
+
+    echo(json_encode($outputList));
+
+    }
+    
 
     #Create a JSON reply to Frond End to create a table with the assets resume
     if(isset($_GET['AssetResume'])){
@@ -53,7 +122,7 @@
     }
     
     #Create a JSON reply with the resume of the indicators
-    if(isset($_GET['AssetIndResume'])){
+    if(isset($_GET['AssetIndicators'])){
 
         #load list of indicators
         $indicators = modelAssetIndResume();
@@ -178,5 +247,4 @@
         //Convert the list to json and return it to the JS file
         echo (json_encode($outputList));
     }
-
 ?>

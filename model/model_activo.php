@@ -22,6 +22,30 @@
         return $sqlQuery;
     }
 
+    //Create a function to laod the table for main screen dashboard
+    function modelAssetsResumeRiskTable(){
+
+        $instance = openOracleConnection();
+        $sqlQuery = oci_parse($instance,'SELECT * FROM ASSETS_RISK_ASSESSMENT');
+        oci_execute($sqlQuery);
+        closeOracleConnection($instance);
+        
+        return $sqlQuery;
+
+    }
+
+    //Create a function to laod the table for main screen dashboard
+    function modelAssetsResumeRisk(){
+
+        $instance = openOracleConnection();
+        $sqlQuery = oci_parse($instance,'SELECT * FROM ASSETS_RISK_ASSESSMENT_RESUME');
+        oci_execute($sqlQuery);
+        closeOracleConnection($instance);
+        
+        return $sqlQuery;
+
+    }
+
     //Create a function to load the basic stats of an asset
     function modelAssetIndResume(){
 
